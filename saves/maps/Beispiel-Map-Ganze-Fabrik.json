@@ -1,0 +1,1780 @@
+{
+ "name": "Beispiel-Map: Ganze Fabrik (3 Etagen)",
+ "desc": "🇩🇪 Die komplette Beispielfabrik: EG Verkauf (30 große + 45 kleine Zahnräder/Min) · E1 sechs Zonen (2× Zahnräder, Steinofen- UND Hochofen-Kohle) · E2 Dünger-Kette mit Gärtnerei. Alle Maschinen-Infos am Kasten ablesbar. KORRIGIERT: In der Steinofen-Zone war das Band zwischen unterer Säge und unterem Tiegel vergessen.\n🇬🇧 The complete example factory: GF sales (30 large + 45 small gears/min) · F1 six zones (2× gears, stone-furnace AND blast-furnace coal) · F2 fertilizer chain with nursery. All machine info readable on the box. FIXED: the stone-furnace zone was missing the belt between the lower saw and the lower crucible.",
+ "app": "AlchemyFactoryEditor",
+ "v": 1,
+ "savedAt": "2026-09-19T03:31:17.116Z",
+ "nameOverrides": {
+  "mats": {},
+  "devs": {}
+ },
+ "boxes": [
+  {
+   "id": 1,
+   "device": "Purchasing Portal",
+   "recipe": "_placeholder",
+   "count": 1,
+   "floor": 1,
+   "x": 1200,
+   "y": 2000,
+   "zone": "Portale → Sägen → Steinofen + 3 Schmelztiegel → Kohle-Lager"
+  },
+  {
+   "id": 3,
+   "device": "Stone Furnace",
+   "recipe": "Holz (Logs)",
+   "count": 1,
+   "floor": 1,
+   "x": 4950,
+   "y": 1650,
+   "zone": "Portale → Sägen → Steinofen + 3 Schmelztiegel → Kohle-Lager"
+  },
+  {
+   "id": 5,
+   "device": "Crucible",
+   "recipe": "Charcoal",
+   "count": 1,
+   "floor": 1,
+   "x": 3500,
+   "y": 2700,
+   "furnaceId": 3,
+   "zone": "Portale → Sägen → Steinofen + 3 Schmelztiegel → Kohle-Lager"
+  },
+  {
+   "id": 6,
+   "device": "Purchasing Portal",
+   "recipe": "_placeholder",
+   "count": 1,
+   "floor": 1,
+   "x": 1200,
+   "y": 2700,
+   "zone": "Portale → Sägen → Steinofen + 3 Schmelztiegel → Kohle-Lager"
+  },
+  {
+   "id": 8,
+   "device": "Table Saw",
+   "recipe": "Plank",
+   "count": 1,
+   "floor": 1,
+   "x": 2200,
+   "y": 2750,
+   "zone": "Portale → Sägen → Steinofen + 3 Schmelztiegel → Kohle-Lager"
+  },
+  {
+   "id": 9,
+   "device": "Crucible",
+   "recipe": "Charcoal",
+   "count": 1,
+   "floor": 1,
+   "x": 3500,
+   "y": 3500,
+   "furnaceId": 3,
+   "zone": "Portale → Sägen → Steinofen + 3 Schmelztiegel → Kohle-Lager"
+  },
+  {
+   "id": 10,
+   "device": "Purchasing Portal",
+   "recipe": "_placeholder",
+   "count": 1,
+   "floor": 1,
+   "x": 1200,
+   "y": 3500,
+   "zone": "Portale → Sägen → Steinofen + 3 Schmelztiegel → Kohle-Lager"
+  },
+  {
+   "id": 11,
+   "device": "Table Saw",
+   "recipe": "Plank",
+   "count": 1,
+   "floor": 1,
+   "x": 2200,
+   "y": 3550,
+   "zone": "Portale → Sägen → Steinofen + 3 Schmelztiegel → Kohle-Lager"
+  },
+  {
+   "id": 12,
+   "device": "Crucible",
+   "recipe": "Charcoal",
+   "count": 1,
+   "floor": 1,
+   "x": 3550,
+   "y": 4250,
+   "furnaceId": 3,
+   "zone": "Portale → Sägen → Steinofen + 3 Schmelztiegel → Kohle-Lager"
+  },
+  {
+   "id": 13,
+   "device": "Purchasing Portal",
+   "recipe": "_placeholder",
+   "count": 1,
+   "floor": 1,
+   "x": 1250,
+   "y": 4250,
+   "zone": "Portale → Sägen → Steinofen + 3 Schmelztiegel → Kohle-Lager"
+  },
+  {
+   "id": 14,
+   "device": "Table Saw",
+   "recipe": "Plank",
+   "count": 1,
+   "floor": 1,
+   "x": 2250,
+   "y": 4300,
+   "zone": "Portale → Sägen → Steinofen + 3 Schmelztiegel → Kohle-Lager"
+  },
+  {
+   "id": 15,
+   "device": "Storage",
+   "recipe": "_sink",
+   "count": 1,
+   "floor": 1,
+   "x": 5350,
+   "y": 4300,
+   "zone": "Portale → Sägen → Steinofen + 3 Schmelztiegel → Kohle-Lager"
+  },
+  {
+   "id": 17,
+   "device": "Purchasing Portal",
+   "recipe": "_placeholder",
+   "count": 1,
+   "floor": 1,
+   "x": 650,
+   "y": 7200,
+   "zone": "Portal → Säge → 3 Schleifer → Lager"
+  },
+  {
+   "id": 18,
+   "device": "Table Saw",
+   "recipe": "Plank",
+   "count": 1,
+   "floor": 1,
+   "x": 1850,
+   "y": 7250,
+   "zone": "Portal → Säge → 3 Schleifer → Lager"
+  },
+  {
+   "id": 19,
+   "device": "Grinder",
+   "recipe": "Large Wooden Gear",
+   "count": 1,
+   "floor": 1,
+   "x": 3050,
+   "y": 6800,
+   "zone": "Portal → Säge → 3 Schleifer → Lager"
+  },
+  {
+   "id": 20,
+   "device": "Grinder",
+   "recipe": "Large Wooden Gear",
+   "count": 1,
+   "floor": 1,
+   "x": 3050,
+   "y": 7300,
+   "zone": "Portal → Säge → 3 Schleifer → Lager"
+  },
+  {
+   "id": 21,
+   "device": "Grinder",
+   "recipe": "Large Wooden Gear",
+   "count": 1,
+   "floor": 1,
+   "x": 3050,
+   "y": 7800,
+   "zone": "Portal → Säge → 3 Schleifer → Lager"
+  },
+  {
+   "id": 22,
+   "device": "Storage",
+   "recipe": "_sink",
+   "count": 1,
+   "floor": 1,
+   "x": 4600,
+   "y": 7400,
+   "zone": "Portal → Säge → 3 Schleifer → Lager"
+  },
+  {
+   "id": 23,
+   "device": "Purchasing Portal",
+   "recipe": "_placeholder",
+   "count": 1,
+   "floor": 1,
+   "x": 600,
+   "y": 9900,
+   "zone": "Portal → Säge → 3 Schleifer → 3 Monteure → Lager"
+  },
+  {
+   "id": 24,
+   "device": "Table Saw",
+   "recipe": "Plank",
+   "count": 1,
+   "floor": 1,
+   "x": 1800,
+   "y": 9950,
+   "zone": "Portal → Säge → 3 Schleifer → 3 Monteure → Lager"
+  },
+  {
+   "id": 25,
+   "device": "Grinder",
+   "recipe": "Large Wooden Gear",
+   "count": 1,
+   "floor": 1,
+   "x": 3000,
+   "y": 9500,
+   "zone": "Portal → Säge → 3 Schleifer → 3 Monteure → Lager"
+  },
+  {
+   "id": 26,
+   "device": "Grinder",
+   "recipe": "Large Wooden Gear",
+   "count": 1,
+   "floor": 1,
+   "x": 3000,
+   "y": 10000,
+   "zone": "Portal → Säge → 3 Schleifer → 3 Monteure → Lager"
+  },
+  {
+   "id": 27,
+   "device": "Grinder",
+   "recipe": "Large Wooden Gear",
+   "count": 1,
+   "floor": 1,
+   "x": 3000,
+   "y": 10500,
+   "zone": "Portal → Säge → 3 Schleifer → 3 Monteure → Lager"
+  },
+  {
+   "id": 30,
+   "device": "Processor",
+   "recipe": "Small Wooden Gear",
+   "count": 1,
+   "floor": 1,
+   "x": 4200,
+   "y": 9500,
+   "zone": "Portal → Säge → 3 Schleifer → 3 Monteure → Lager"
+  },
+  {
+   "id": 31,
+   "device": "Storage",
+   "recipe": "_sink",
+   "count": 1,
+   "floor": 1,
+   "x": 5550,
+   "y": 10000,
+   "zone": "Portal → Säge → 3 Schleifer → 3 Monteure → Lager"
+  },
+  {
+   "id": 32,
+   "device": "Processor",
+   "recipe": "Small Wooden Gear",
+   "count": 1,
+   "floor": 1,
+   "x": 4200,
+   "y": 10000,
+   "zone": "Portal → Säge → 3 Schleifer → 3 Monteure → Lager"
+  },
+  {
+   "id": 33,
+   "device": "Processor",
+   "recipe": "Small Wooden Gear",
+   "count": 1,
+   "floor": 1,
+   "x": 4200,
+   "y": 10550,
+   "zone": "Portal → Säge → 3 Schleifer → 3 Monteure → Lager"
+  },
+  {
+   "id": 48,
+   "device": "Purchasing Portal",
+   "recipe": "_placeholder",
+   "count": 4,
+   "floor": 1,
+   "x": 6150,
+   "y": 2350,
+   "zone": "Holzkohle-Test: Steinofen mit 1 Schmelztiegel"
+  },
+  {
+   "id": 49,
+   "device": "Table Saw",
+   "recipe": "Plank",
+   "count": 3,
+   "floor": 1,
+   "x": 7050,
+   "y": 3050,
+   "zone": "Holzkohle-Test: Steinofen mit 1 Schmelztiegel"
+  },
+  {
+   "id": 50,
+   "device": "Stone Furnace",
+   "recipe": "Holz (Logs)",
+   "count": 1,
+   "floor": 1,
+   "x": 9550,
+   "y": 2150,
+   "zone": "Holzkohle-Test: Steinofen mit 1 Schmelztiegel"
+  },
+  {
+   "id": 51,
+   "device": "Crucible",
+   "recipe": "Charcoal",
+   "count": 3,
+   "floor": 1,
+   "x": 8150,
+   "y": 3050,
+   "furnaceId": 50,
+   "zone": "Holzkohle-Test: Steinofen mit 1 Schmelztiegel"
+  },
+  {
+   "id": 52,
+   "device": "Storage",
+   "recipe": "_sink",
+   "count": 1,
+   "floor": 1,
+   "x": 10200,
+   "y": 3250,
+   "zone": "Holzkohle-Test: Steinofen mit 1 Schmelztiegel"
+  },
+  {
+   "id": 53,
+   "device": "Purchasing Portal",
+   "recipe": "_placeholder",
+   "count": 2,
+   "floor": 1,
+   "x": 7250,
+   "y": 8300,
+   "zone": "Zahnrad-Setup: kleine & große Zahnräder"
+  },
+  {
+   "id": 54,
+   "device": "Table Saw",
+   "recipe": "Plank",
+   "count": 2,
+   "floor": 1,
+   "x": 8500,
+   "y": 8400,
+   "zone": "Zahnrad-Setup: kleine & große Zahnräder"
+  },
+  {
+   "id": 55,
+   "device": "Grinder",
+   "recipe": "Large Wooden Gear",
+   "count": 3,
+   "floor": 1,
+   "x": 9750,
+   "y": 8200,
+   "zone": "Zahnrad-Setup: kleine & große Zahnräder"
+  },
+  {
+   "id": 56,
+   "device": "Storage",
+   "recipe": "_sink",
+   "count": 1,
+   "floor": 1,
+   "x": 12450,
+   "y": 8250,
+   "zone": "Zahnrad-Setup: kleine & große Zahnräder"
+  },
+  {
+   "id": 57,
+   "device": "Grinder",
+   "recipe": "Large Wooden Gear",
+   "count": 3,
+   "floor": 1,
+   "x": 9750,
+   "y": 8700,
+   "zone": "Zahnrad-Setup: kleine & große Zahnräder"
+  },
+  {
+   "id": 59,
+   "device": "Storage",
+   "recipe": "_sink",
+   "count": 1,
+   "floor": 1,
+   "x": 12500,
+   "y": 8850,
+   "zone": "Zahnrad-Setup: kleine & große Zahnräder"
+  },
+  {
+   "id": 60,
+   "device": "Processor",
+   "recipe": "Small Wooden Gear",
+   "count": 3,
+   "floor": 1,
+   "x": 11400,
+   "y": 8750,
+   "zone": "Zahnrad-Setup: kleine & große Zahnräder"
+  },
+  {
+   "id": 61,
+   "device": "Purchasing Portal",
+   "recipe": "_placeholder",
+   "count": 7,
+   "floor": 1,
+   "x": 11550,
+   "y": 3850,
+   "zone": "Portal → Sägen → Hochofen mit 14 Schmelztiegeln → Lager + Lift nach E2"
+  },
+  {
+   "id": 62,
+   "device": "Blast Furnace",
+   "recipe": "Holz (Logs)",
+   "count": 1,
+   "floor": 1,
+   "x": 16300,
+   "y": 2200,
+   "zone": "Portal → Sägen → Hochofen mit 14 Schmelztiegeln → Lager + Lift nach E2"
+  },
+  {
+   "id": 63,
+   "device": "Crucible",
+   "recipe": "Charcoal",
+   "count": 2,
+   "floor": 1,
+   "x": 14450,
+   "y": 3200,
+   "furnaceId": 62,
+   "zone": "Portal → Sägen → Hochofen mit 14 Schmelztiegeln → Lager + Lift nach E2"
+  },
+  {
+   "id": 64,
+   "device": "Table Saw",
+   "recipe": "Plank",
+   "count": 7,
+   "floor": 1,
+   "x": 12750,
+   "y": 3850,
+   "zone": "Portal → Sägen → Hochofen mit 14 Schmelztiegeln → Lager + Lift nach E2"
+  },
+  {
+   "id": 65,
+   "device": "Crucible",
+   "recipe": "Charcoal",
+   "count": 6,
+   "floor": 1,
+   "x": 14450,
+   "y": 3800,
+   "furnaceId": 62,
+   "zone": "Portal → Sägen → Hochofen mit 14 Schmelztiegeln → Lager + Lift nach E2"
+  },
+  {
+   "id": 66,
+   "device": "Purchasing Portal",
+   "recipe": "_placeholder",
+   "count": 1,
+   "floor": 1,
+   "x": 11950,
+   "y": 2350,
+   "zone": "Portal → Sägen → Hochofen mit 14 Schmelztiegeln → Lager + Lift nach E2"
+  },
+  {
+   "id": 67,
+   "device": "Crucible",
+   "recipe": "Charcoal",
+   "count": 6,
+   "floor": 1,
+   "x": 14450,
+   "y": 4650,
+   "zone": "Portal → Sägen → Hochofen mit 14 Schmelztiegeln → Lager + Lift nach E2"
+  },
+  {
+   "id": 68,
+   "device": "Lift",
+   "recipe": "Lift",
+   "count": 1,
+   "floor": 1,
+   "x": 16550,
+   "y": 3900,
+   "liftPartner": 69,
+   "liftRole": "in",
+   "_liftTarget": 2,
+   "zone": "Portal → Sägen → Hochofen mit 14 Schmelztiegeln → Lager + Lift nach E2"
+  },
+  {
+   "id": 69,
+   "device": "Lift",
+   "recipe": "Lift",
+   "count": 1,
+   "floor": 2,
+   "x": 6000,
+   "y": 2700,
+   "liftPartner": 68,
+   "liftRole": "out",
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 70,
+   "device": "Storage",
+   "recipe": "_sink",
+   "count": 1,
+   "floor": 1,
+   "x": 15900,
+   "y": 4850,
+   "zone": "Portal → Sägen → Hochofen mit 14 Schmelztiegeln → Lager + Lift nach E2"
+  },
+  {
+   "id": 72,
+   "device": "Seed Plot",
+   "recipe": "Sage Seeds → Sage",
+   "count": 2,
+   "floor": 2,
+   "x": 8850,
+   "y": 3300,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 73,
+   "device": "Blast Furnace",
+   "recipe": "Holz (Logs)",
+   "count": 1,
+   "floor": 2,
+   "x": 11600,
+   "y": 2450,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 74,
+   "device": "Purchasing Portal",
+   "recipe": "_placeholder",
+   "count": 1,
+   "floor": 2,
+   "x": 7350,
+   "y": 2100,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 75,
+   "device": "Crucible",
+   "recipe": "Plant Ash",
+   "count": 1,
+   "floor": 2,
+   "x": 11600,
+   "y": 3200,
+   "furnaceId": 73,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 77,
+   "device": "Storage",
+   "recipe": "_sink",
+   "count": 1,
+   "floor": 2,
+   "x": 10450,
+   "y": 3400,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 79,
+   "device": "Stone Crusher",
+   "recipe": "Stone",
+   "count": 2,
+   "floor": 2,
+   "x": 9750,
+   "y": 4750,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 81,
+   "device": "Crucible",
+   "recipe": "Quicklime",
+   "count": 6,
+   "floor": 2,
+   "x": 11600,
+   "y": 4650,
+   "furnaceId": 73,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 82,
+   "device": "Purchasing Portal",
+   "recipe": "_placeholder",
+   "count": 2,
+   "floor": 2,
+   "x": 7100,
+   "y": 4600,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 84,
+   "device": "Assembler",
+   "recipe": "Basic Fertilizer",
+   "count": 1,
+   "floor": 2,
+   "x": 14800,
+   "y": 3300,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 86,
+   "device": "Grinder",
+   "recipe": "Quicklime Powder",
+   "count": 6,
+   "floor": 2,
+   "x": 12900,
+   "y": 4650,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 87,
+   "device": "Assembler",
+   "recipe": "Basic Fertilizer",
+   "count": 1,
+   "floor": 2,
+   "x": 15000,
+   "y": 4950,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 88,
+   "device": "Nursery",
+   "recipe": "Sage",
+   "count": 1,
+   "floor": 2,
+   "x": 8850,
+   "y": 4000,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 89,
+   "device": "Crucible",
+   "recipe": "Plant Ash",
+   "count": 1,
+   "floor": 2,
+   "x": 11600,
+   "y": 3950,
+   "furnaceId": 73,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 90,
+   "device": "Storage",
+   "recipe": "_sink",
+   "count": 1,
+   "floor": 2,
+   "x": 17250,
+   "y": 5000,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 91,
+   "device": "Lift",
+   "recipe": "Lift",
+   "count": 1,
+   "floor": 1,
+   "x": 13500,
+   "y": 8200,
+   "liftPartner": 92,
+   "liftRole": "in",
+   "_liftTarget": 2
+  },
+  {
+   "id": 92,
+   "device": "Lift",
+   "recipe": "Lift",
+   "count": 1,
+   "floor": 0,
+   "x": 13350,
+   "y": 8750,
+   "liftPartner": 91,
+   "liftRole": "out"
+  },
+  {
+   "id": 93,
+   "device": "Lift",
+   "recipe": "Lift",
+   "count": 1,
+   "floor": 1,
+   "x": 13500,
+   "y": 8800,
+   "liftRole": "in",
+   "liftPartner": 94
+  },
+  {
+   "id": 94,
+   "device": "Lift",
+   "recipe": "Lift",
+   "count": 1,
+   "floor": 0,
+   "x": 13350,
+   "y": 9250,
+   "liftRole": "out",
+   "liftPartner": 93
+  },
+  {
+   "id": 95,
+   "device": "Sales Room",
+   "recipe": "_sink",
+   "count": 1,
+   "floor": 0,
+   "x": 14500,
+   "y": 9050
+  }
+ ],
+ "connections": [
+  {
+   "from": 1,
+   "to": 3,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c21"
+  },
+  {
+   "from": 6,
+   "to": 8,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c1"
+  },
+  {
+   "from": 8,
+   "to": 5,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c2"
+  },
+  {
+   "from": 5,
+   "to": 3,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c22"
+  },
+  {
+   "from": 10,
+   "to": 11,
+   "fromPort": 0,
+   "toPort": 0,
+   "id": "c3",
+   "waypoints": []
+  },
+  {
+   "from": 11,
+   "to": 9,
+   "fromPort": 0,
+   "toPort": 0,
+   "id": "c4",
+   "waypoints": []
+  },
+  {
+   "from": 13,
+   "to": 14,
+   "fromPort": 0,
+   "toPort": 0,
+   "id": "c5",
+   "waypoints": []
+  },
+  {
+   "from": 9,
+   "to": 3,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c23"
+  },
+  {
+   "from": 12,
+   "to": 15,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c24"
+  },
+  {
+   "from": 17,
+   "to": 18,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c7"
+  },
+  {
+   "from": 18,
+   "to": 19,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c8"
+  },
+  {
+   "from": 18,
+   "to": 20,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c9"
+  },
+  {
+   "from": 18,
+   "to": 21,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c10"
+  },
+  {
+   "from": 19,
+   "to": 22,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c11"
+  },
+  {
+   "from": 20,
+   "to": 22,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c12"
+  },
+  {
+   "from": 21,
+   "to": 22,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c13"
+  },
+  {
+   "from": 23,
+   "to": 24,
+   "fromPort": 0,
+   "toPort": 0,
+   "id": "c14",
+   "waypoints": []
+  },
+  {
+   "from": 24,
+   "to": 25,
+   "fromPort": 0,
+   "toPort": 0,
+   "id": "c15",
+   "waypoints": []
+  },
+  {
+   "from": 24,
+   "to": 26,
+   "fromPort": 0,
+   "toPort": 0,
+   "id": "c16",
+   "waypoints": []
+  },
+  {
+   "from": 24,
+   "to": 27,
+   "fromPort": 0,
+   "toPort": 0,
+   "id": "c17",
+   "waypoints": []
+  },
+  {
+   "from": 25,
+   "to": 30,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c36"
+  },
+  {
+   "from": 30,
+   "to": 31,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c37"
+  },
+  {
+   "from": 26,
+   "to": 32,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c38"
+  },
+  {
+   "from": 27,
+   "to": 33,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c39"
+  },
+  {
+   "from": 32,
+   "to": 31,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c40"
+  },
+  {
+   "from": 33,
+   "to": 31,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c41"
+  },
+  {
+   "from": 48,
+   "to": 50,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c42"
+  },
+  {
+   "from": 48,
+   "to": 49,
+   "fromPort": 1,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c43"
+  },
+  {
+   "from": 48,
+   "to": 49,
+   "fromPort": 2,
+   "toPort": 1,
+   "waypoints": [],
+   "id": "c44"
+  },
+  {
+   "from": 48,
+   "to": 49,
+   "fromPort": 3,
+   "toPort": 2,
+   "waypoints": [],
+   "id": "c45"
+  },
+  {
+   "from": 49,
+   "to": 51,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c46"
+  },
+  {
+   "from": 49,
+   "to": 51,
+   "fromPort": 1,
+   "toPort": 1,
+   "waypoints": [],
+   "id": "c47"
+  },
+  {
+   "from": 49,
+   "to": 51,
+   "fromPort": 2,
+   "toPort": 2,
+   "waypoints": [],
+   "id": "c48"
+  },
+  {
+   "from": 51,
+   "to": 50,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c49"
+  },
+  {
+   "from": 51,
+   "to": 50,
+   "fromPort": 1,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c50"
+  },
+  {
+   "from": 51,
+   "to": 52,
+   "fromPort": 2,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c51"
+  },
+  {
+   "from": 53,
+   "to": 54,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c52"
+  },
+  {
+   "from": 54,
+   "to": 55,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c53"
+  },
+  {
+   "from": 54,
+   "to": 55,
+   "fromPort": 0,
+   "toPort": 1,
+   "waypoints": [],
+   "id": "c54"
+  },
+  {
+   "from": 54,
+   "to": 55,
+   "fromPort": 0,
+   "toPort": 2,
+   "waypoints": [],
+   "id": "c55"
+  },
+  {
+   "from": 55,
+   "to": 56,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c56"
+  },
+  {
+   "from": 55,
+   "to": 56,
+   "fromPort": 1,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c57"
+  },
+  {
+   "from": 55,
+   "to": 56,
+   "fromPort": 2,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c58"
+  },
+  {
+   "from": 53,
+   "to": 54,
+   "fromPort": 1,
+   "toPort": 1,
+   "waypoints": [],
+   "id": "c59"
+  },
+  {
+   "from": 54,
+   "to": 57,
+   "fromPort": 1,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c60"
+  },
+  {
+   "from": 54,
+   "to": 57,
+   "fromPort": 1,
+   "toPort": 1,
+   "waypoints": [],
+   "id": "c61"
+  },
+  {
+   "from": 54,
+   "to": 57,
+   "fromPort": 1,
+   "toPort": 2,
+   "waypoints": [],
+   "id": "c62"
+  },
+  {
+   "from": 57,
+   "to": 60,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c63"
+  },
+  {
+   "from": 57,
+   "to": 60,
+   "fromPort": 1,
+   "toPort": 1,
+   "waypoints": [],
+   "id": "c64"
+  },
+  {
+   "from": 57,
+   "to": 60,
+   "fromPort": 2,
+   "toPort": 2,
+   "waypoints": [],
+   "id": "c65"
+  },
+  {
+   "from": 60,
+   "to": 59,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c66"
+  },
+  {
+   "from": 60,
+   "to": 59,
+   "fromPort": 1,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c67"
+  },
+  {
+   "from": 60,
+   "to": 59,
+   "fromPort": 2,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c68"
+  },
+  {
+   "from": 64,
+   "to": 63,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c69"
+  },
+  {
+   "from": 64,
+   "to": 63,
+   "fromPort": 0,
+   "toPort": 1,
+   "waypoints": [],
+   "id": "c70"
+  },
+  {
+   "from": 63,
+   "to": 62,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c71"
+  },
+  {
+   "from": 63,
+   "to": 62,
+   "fromPort": 1,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c72"
+  },
+  {
+   "from": 64,
+   "to": 65,
+   "fromPort": 1,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c73"
+  },
+  {
+   "from": 64,
+   "to": 65,
+   "fromPort": 1,
+   "toPort": 1,
+   "waypoints": [],
+   "id": "c74"
+  },
+  {
+   "from": 64,
+   "to": 65,
+   "fromPort": 2,
+   "toPort": 2,
+   "waypoints": [],
+   "id": "c75"
+  },
+  {
+   "from": 64,
+   "to": 65,
+   "fromPort": 2,
+   "toPort": 3,
+   "waypoints": [],
+   "id": "c76"
+  },
+  {
+   "from": 64,
+   "to": 65,
+   "fromPort": 3,
+   "toPort": 4,
+   "waypoints": [],
+   "id": "c77"
+  },
+  {
+   "from": 64,
+   "to": 65,
+   "fromPort": 3,
+   "toPort": 5,
+   "waypoints": [],
+   "id": "c78"
+  },
+  {
+   "from": 61,
+   "to": 64,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c79"
+  },
+  {
+   "from": 61,
+   "to": 64,
+   "fromPort": 1,
+   "toPort": 1,
+   "waypoints": [],
+   "id": "c80"
+  },
+  {
+   "from": 61,
+   "to": 64,
+   "fromPort": 2,
+   "toPort": 2,
+   "waypoints": [],
+   "id": "c81"
+  },
+  {
+   "from": 61,
+   "to": 64,
+   "fromPort": 3,
+   "toPort": 3,
+   "waypoints": [],
+   "id": "c82"
+  },
+  {
+   "from": 66,
+   "to": 62,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c83"
+  },
+  {
+   "from": 61,
+   "to": 64,
+   "fromPort": 4,
+   "toPort": 4,
+   "waypoints": [],
+   "id": "c84"
+  },
+  {
+   "from": 61,
+   "to": 64,
+   "fromPort": 5,
+   "toPort": 5,
+   "waypoints": [],
+   "id": "c85"
+  },
+  {
+   "from": 61,
+   "to": 64,
+   "fromPort": 6,
+   "toPort": 6,
+   "waypoints": [],
+   "id": "c86"
+  },
+  {
+   "from": 64,
+   "to": 67,
+   "fromPort": 4,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c87"
+  },
+  {
+   "from": 64,
+   "to": 67,
+   "fromPort": 4,
+   "toPort": 1,
+   "waypoints": [],
+   "id": "c88"
+  },
+  {
+   "from": 64,
+   "to": 67,
+   "fromPort": 5,
+   "toPort": 2,
+   "waypoints": [],
+   "id": "c89"
+  },
+  {
+   "from": 64,
+   "to": 67,
+   "fromPort": 5,
+   "toPort": 3,
+   "waypoints": [],
+   "id": "c90"
+  },
+  {
+   "from": 64,
+   "to": 67,
+   "fromPort": 6,
+   "toPort": 4,
+   "waypoints": [],
+   "id": "c91"
+  },
+  {
+   "from": 64,
+   "to": 67,
+   "fromPort": 6,
+   "toPort": 5,
+   "waypoints": [],
+   "id": "c92"
+  },
+  {
+   "from": 64,
+   "to": 67,
+   "fromPort": 6,
+   "toPort": 3,
+   "waypoints": [],
+   "id": "c93"
+  },
+  {
+   "from": 65,
+   "to": 68,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c94"
+  },
+  {
+   "from": 65,
+   "to": 68,
+   "fromPort": 1,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c95"
+  },
+  {
+   "from": 65,
+   "to": 68,
+   "fromPort": 2,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c96"
+  },
+  {
+   "from": 65,
+   "to": 68,
+   "fromPort": 3,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c97"
+  },
+  {
+   "from": 65,
+   "to": 68,
+   "fromPort": 4,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c98"
+  },
+  {
+   "from": 65,
+   "to": 68,
+   "fromPort": 5,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c99"
+  },
+  {
+   "from": 67,
+   "to": 70,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c100"
+  },
+  {
+   "from": 67,
+   "to": 70,
+   "fromPort": 1,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c101"
+  },
+  {
+   "from": 67,
+   "to": 70,
+   "fromPort": 2,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c102"
+  },
+  {
+   "from": 67,
+   "to": 70,
+   "fromPort": 3,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c103"
+  },
+  {
+   "from": 67,
+   "to": 70,
+   "fromPort": 4,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c104"
+  },
+  {
+   "from": 67,
+   "to": 70,
+   "fromPort": 5,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c105"
+  },
+  {
+   "from": 74,
+   "to": 73,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c106"
+  },
+  {
+   "from": 69,
+   "to": 73,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c107"
+  },
+  {
+   "from": 72,
+   "to": 77,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c108"
+  },
+  {
+   "from": 72,
+   "to": 77,
+   "fromPort": 1,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c109"
+  },
+  {
+   "from": 77,
+   "to": 75,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c110"
+  },
+  {
+   "from": 79,
+   "to": 81,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c111"
+  },
+  {
+   "from": 82,
+   "to": 79,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c112"
+  },
+  {
+   "from": 75,
+   "to": 84,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c35"
+  },
+  {
+   "from": 81,
+   "to": 86,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c113"
+  },
+  {
+   "from": 86,
+   "to": 84,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c114"
+  },
+  {
+   "from": 79,
+   "to": 81,
+   "fromPort": 0,
+   "toPort": 1,
+   "waypoints": [],
+   "id": "c115"
+  },
+  {
+   "from": 81,
+   "to": 86,
+   "fromPort": 1,
+   "toPort": 1,
+   "waypoints": [],
+   "id": "c116"
+  },
+  {
+   "from": 86,
+   "to": 84,
+   "fromPort": 1,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c117"
+  },
+  {
+   "from": 79,
+   "to": 81,
+   "fromPort": 0,
+   "toPort": 2,
+   "waypoints": [],
+   "id": "c118"
+  },
+  {
+   "from": 81,
+   "to": 86,
+   "fromPort": 2,
+   "toPort": 2,
+   "waypoints": [],
+   "id": "c119"
+  },
+  {
+   "from": 86,
+   "to": 84,
+   "fromPort": 2,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c120"
+  },
+  {
+   "from": 81,
+   "to": 86,
+   "fromPort": 3,
+   "toPort": 3,
+   "waypoints": [],
+   "id": "c121"
+  },
+  {
+   "from": 81,
+   "to": 86,
+   "fromPort": 4,
+   "toPort": 4,
+   "waypoints": [],
+   "id": "c122"
+  },
+  {
+   "from": 81,
+   "to": 86,
+   "fromPort": 5,
+   "toPort": 5,
+   "waypoints": [],
+   "id": "c123"
+  },
+  {
+   "from": 79,
+   "to": 81,
+   "fromPort": 1,
+   "toPort": 3,
+   "waypoints": [],
+   "id": "c124"
+  },
+  {
+   "from": 79,
+   "to": 81,
+   "fromPort": 1,
+   "toPort": 4,
+   "waypoints": [],
+   "id": "c125"
+  },
+  {
+   "from": 79,
+   "to": 81,
+   "fromPort": 1,
+   "toPort": 5,
+   "waypoints": [],
+   "id": "c126"
+  },
+  {
+   "from": 82,
+   "to": 79,
+   "fromPort": 1,
+   "toPort": 1,
+   "waypoints": [],
+   "id": "c127"
+  },
+  {
+   "from": 86,
+   "to": 87,
+   "fromPort": 3,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c128"
+  },
+  {
+   "from": 86,
+   "to": 87,
+   "fromPort": 4,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c129"
+  },
+  {
+   "from": 86,
+   "to": 87,
+   "fromPort": 5,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c130"
+  },
+  {
+   "from": 88,
+   "to": 89,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c133"
+  },
+  {
+   "from": 84,
+   "to": 88,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [
+    {
+     "x": 15600,
+     "y": 3850
+    },
+    {
+     "x": 8550,
+     "y": 3900
+    }
+   ],
+   "id": "c132"
+  },
+  {
+   "from": 89,
+   "to": 87,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [
+    {
+     "x": 14400,
+     "y": 4250
+    }
+   ],
+   "id": "c134"
+  },
+  {
+   "from": 87,
+   "to": 90,
+   "fromPort": 0,
+   "toPort": 0,
+   "id": "c136",
+   "waypoints": []
+  },
+  {
+   "from": 56,
+   "to": 91,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": []
+  },
+  {
+   "from": 59,
+   "to": 93,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": []
+  },
+  {
+   "from": 92,
+   "to": 95,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": []
+  },
+  {
+   "from": 94,
+   "to": 95,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": []
+  },
+  {
+   "from": 14,
+   "to": 12,
+   "fromPort": 0,
+   "toPort": 0
+  }
+ ],
+ "nextId": 96,
+ "portalConfig": {
+  "1": {
+   "item": "logs",
+   "rate": 1
+  },
+  "6": {
+   "item": "logs",
+   "rate": 1
+  },
+  "10": {
+   "item": "logs",
+   "rate": 1
+  },
+  "13": {
+   "item": "logs",
+   "rate": 1
+  },
+  "17": {
+   "item": "logs",
+   "rate": 1
+  },
+  "23": {
+   "item": "logs",
+   "rate": 1
+  },
+  "48": {
+   "item": "logs",
+   "rate": 1
+  },
+  "53": {
+   "item": "logs",
+   "rate": 1
+  },
+  "61": {
+   "item": "logs",
+   "rate": 1,
+   "batch": 2
+  },
+  "66": {
+   "item": "logs",
+   "rate": 1
+  },
+  "74": {
+   "item": "logs",
+   "rate": 1
+  },
+  "82": {
+   "item": "limestone",
+   "rate": 1
+  }
+ },
+ "centerPos": null,
+ "centerLabel": "Zentrum",
+ "factoryEfficiency": 100,
+ "beltCapacity": 60,
+ "snapEnabled": true,
+ "zoneConfig": {},
+ "floorCount": 2
+}

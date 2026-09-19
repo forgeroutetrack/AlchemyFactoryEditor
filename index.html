@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alchemy Factory Editor – Produktionsplaner</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="topbar">
+<h1>⚗️ Alchemy Factory Editor</h1>
+<span class="hdr-badge">Fan-Planer · nicht das Spiel</span>
+<button class="hdr-badge beta" id="betaChip" onclick="showBetaInfo()" title="Warum Beta? — Klick für Infos & Fehler melden" style="cursor:pointer;background:rgba(251,191,36,.12);border-color:rgba(251,191,36,.45);color:#fbbf24;font-weight:700">🧪 Beta</button>
+<div class="theme-toggle" title="Farbe: Hell / Dunkel (Klick)"><button onclick="setTheme('light')" id="themeLight">☀️</button><button onclick="setTheme('dark')" id="themeDark" class="active">🌙</button></div>
+<button onclick="setLang(uiLang==='de'?'en':'de')" id="langBtn" title="Sprache / Language — Tasten: E = English, D = Deutsch" style="font-weight:700">🌐 EN</button>
+<span class="topbar-sep"></span>
+<button onclick="showSaveDialog()" title="Map oder Zone speichern">💾 Speichern</button>
+<button onclick="showLoadDialog()" title="Map oder Zone laden">📂 Laden</button>
+<span class="topbar-sep"></span>
+<span class="topbar-sep"></span>
+<button onclick="showCodex()" title="Rezept-Codex: alle Rezepte nachschlagen">📖 Codex</button>
+<button onclick="showHelp()" title="Hilfe & Tastenkürzel">❓ Hilfe</button>
+<button onclick="toggleHeader()" title="Menü ausblenden — mehr freie Karte (Wieder-Anzeigen: ☰ oben rechts)" class="hdr-collapse">▲ Menü schließen</button>
+
+</div>
+<button class="hdr-restore" onclick="toggleHeader()" title="Menü wieder anzeigen">☰</button>
+
+<div class="canvas-area" id="canvasArea">
+<div id="boxesContainer"></div>
+<canvas id="connCanvas"></canvas>
+</div>
+<span id="statBar" style="display:none">Bereit</span>
+<span id="topInfo" style="display:none"></span>
+<div class="edge-pill" id="edgePill">
+  <button data-fly="ui" onclick="toggleEdgeFly('ui',this)" title="Größe der Fenster — Klick öffnet +/- Auswahl"><span id="uiLbl">125%</span></button>
+  <button data-fly="zoom" onclick="toggleEdgeFly('zoom',this)" title="Zoom — Klick öffnet die Auswahl">🔍</button>
+  <button id="snapBtn" onclick="toggleSnap()" title="Raster: Am Raster einrasten">🧲</button>
+  <div class="edge-sep"></div>
+  <button onclick="chgFloor(1)" title="Eine Etage höher (Bild↑)">▲</button>
+  <button onclick="showFloors()" title="Etagen-Übersicht — klick auf die Etage, um sie anzuzeigen"><span id="floorLbl">EG</span></button>
+  <button onclick="chgFloor(-1)" title="Eine Etage tiefer (Bild↓)">▼</button>
+  <div class="edge-sep"></div>
+  <button onclick="toggleStatus()" title="Fabrik-Status: Bilanz aller Materialien">📊</button>
+  <button data-fly="info" onclick="toggleEdgeFly('info',this)" title="Meldungen & Hinweise der Fabrik">ℹ️</button>
+  <div class="edge-sep"></div>
+  <button data-fly="del" onclick="toggleEdgeFly('del',this)" title="Löschen — Klick öffnet: Auswahl oder ganze Karte">🗑️</button>
+</div>
+<div id="selInfo" style="position:fixed;bottom:112px;left:12px;font-size:11px;color:#58a6ff;background:var(--bg-secondary);padding:3px 8px;border-radius:4px;border:1px solid var(--border);display:none;z-index:40">
+  <span id="selInfoText"></span> <button onclick="clearSelection()" style="font-size:10px;padding:1px 6px;margin-left:6px">✕ Auswahl aufheben</button>
+</div>
+
+<div class="hotbar" id="hotbar"></div>
+<script src="js/editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+{
+ "name": "Beispiel-Zone: Holzkohle mit Steinofen",
+ "desc": "🇩🇪 Die kleinste Kohle-Kette: Portal → Säge → Schmelztiegel → Steinofen (Brennstoff) + Lager · 15 Holzkohle/Min. Alle Linien gezogen — alles grün.\n🇬🇧 The smallest coal chain: portal → saw → crucible → stone furnace (fuel) + storage · 15 charcoal/min. All lines drawn — everything green.",
+ "app": "AlchemyFactoryEditor",
+ "v": 1,
+ "type": "zone",
+ "zone": "Holzkohle-Test: Steinofen mit 1 Schmelztiegel",
+ "savedAt": "2026-09-19T04:04:01.675Z",
+ "boxes": [
+  {
+   "id": 48,
+   "device": "Purchasing Portal",
+   "recipe": "_placeholder",
+   "count": 4,
+   "floor": 1,
+   "x": 6150,
+   "y": 2350,
+   "zone": "Holzkohle-Test: Steinofen mit 1 Schmelztiegel"
+  },
+  {
+   "id": 49,
+   "device": "Table Saw",
+   "recipe": "Plank",
+   "count": 3,
+   "floor": 1,
+   "x": 7050,
+   "y": 3050,
+   "zone": "Holzkohle-Test: Steinofen mit 1 Schmelztiegel"
+  },
+  {
+   "id": 50,
+   "device": "Stone Furnace",
+   "recipe": "Holz (Logs)",
+   "count": 1,
+   "floor": 1,
+   "x": 9550,
+   "y": 2150,
+   "zone": "Holzkohle-Test: Steinofen mit 1 Schmelztiegel"
+  },
+  {
+   "id": 51,
+   "device": "Crucible",
+   "recipe": "Charcoal",
+   "count": 3,
+   "floor": 1,
+   "x": 8150,
+   "y": 3050,
+   "furnaceId": 50,
+   "zone": "Holzkohle-Test: Steinofen mit 1 Schmelztiegel"
+  },
+  {
+   "id": 52,
+   "device": "Storage",
+   "recipe": "_sink",
+   "count": 1,
+   "floor": 1,
+   "x": 10200,
+   "y": 3250,
+   "zone": "Holzkohle-Test: Steinofen mit 1 Schmelztiegel"
+  }
+ ],
+ "connections": [
+  {
+   "from": 48,
+   "to": 50,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c42"
+  },
+  {
+   "from": 48,
+   "to": 49,
+   "fromPort": 1,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c43"
+  },
+  {
+   "from": 48,
+   "to": 49,
+   "fromPort": 2,
+   "toPort": 1,
+   "waypoints": [],
+   "id": "c44"
+  },
+  {
+   "from": 48,
+   "to": 49,
+   "fromPort": 3,
+   "toPort": 2,
+   "waypoints": [],
+   "id": "c45"
+  },
+  {
+   "from": 49,
+   "to": 51,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c46"
+  },
+  {
+   "from": 49,
+   "to": 51,
+   "fromPort": 1,
+   "toPort": 1,
+   "waypoints": [],
+   "id": "c47"
+  },
+  {
+   "from": 49,
+   "to": 51,
+   "fromPort": 2,
+   "toPort": 2,
+   "waypoints": [],
+   "id": "c48"
+  },
+  {
+   "from": 51,
+   "to": 50,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c49"
+  },
+  {
+   "from": 51,
+   "to": 50,
+   "fromPort": 1,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c50"
+  },
+  {
+   "from": 51,
+   "to": 52,
+   "fromPort": 2,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c51"
+  }
+ ],
+ "portalConfig": {
+  "48": {
+   "item": "logs",
+   "rate": 1
+  }
+ },
+ "zoneConfig": {},
+ "nextId": 96,
+ "factoryEfficiency": 100,
+ "beltCapacity": 60
+}

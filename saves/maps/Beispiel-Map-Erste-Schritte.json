@@ -1,0 +1,147 @@
+{
+ "name": "Beispiel-Map – Erste Schritte",
+ "desc": "🇩🇪 Erste Schritte: die kleine Holz-Kette (Portal → Säge → Schmelztiegel auf dem Steinofen) + Ofen-Platz. Zum Ausprobieren: Lines ziehen, Ampel lesen (🟢🟡🔴), speichern.\n🇬🇧 First steps: the small wood chain (portal → saw → crucible on the stone furnace) + furnace spot. For trying out: draw lines, read the traffic lights, save.",
+ "app": "AlchemyFactoryEditor",
+ "v": 1,
+ "version": 1,
+ "exportDate": "2026-09-18T00:00:00.000Z",
+ "boxes": [
+  {
+   "id": 1,
+   "device": "Purchasing Portal",
+   "recipe": "_placeholder",
+   "count": 1,
+   "floor": 0,
+   "x": 0,
+   "y": 200,
+   "zone": "1 Holzkette"
+  },
+  {
+   "id": 2,
+   "device": "Table Saw",
+   "recipe": "Plank",
+   "count": 1,
+   "floor": 0,
+   "x": 500,
+   "y": 200,
+   "zone": "1 Holzkette"
+  },
+  {
+   "id": 3,
+   "device": "Grinder",
+   "recipe": "Large Wooden Gear",
+   "count": 3,
+   "floor": 0,
+   "x": 1000,
+   "y": 200,
+   "zone": "1 Holzkette"
+  },
+  {
+   "id": 4,
+   "device": "Storage",
+   "recipe": "_sink",
+   "count": 1,
+   "floor": 0,
+   "x": 1500,
+   "y": 200,
+   "zone": "1 Holzkette"
+  },
+  {
+   "id": 5,
+   "device": "Stone Furnace",
+   "recipe": "Holz (Logs)",
+   "count": 1,
+   "floor": 0,
+   "x": 500,
+   "y": 900,
+   "zone": "2 Ofen-Platz"
+  },
+  {
+   "id": 6,
+   "device": "Crucible",
+   "recipe": "Charcoal",
+   "count": 2,
+   "floor": 0,
+   "x": 500,
+   "y": 600,
+   "furnaceId": 5,
+   "zone": "2 Ofen-Platz"
+  },
+  {
+   "id": 7,
+   "device": "Purchasing Portal",
+   "recipe": "_placeholder",
+   "count": 1,
+   "floor": 0,
+   "x": 0,
+   "y": 900,
+   "zone": "2 Ofen-Platz"
+  }
+ ],
+ "connections": [
+  {
+   "from": 1,
+   "to": 2,
+   "fromPort": 0,
+   "toPort": 0
+  },
+  {
+   "from": 2,
+   "to": 3,
+   "fromPort": 0,
+   "toPort": 0
+  },
+  {
+   "from": 2,
+   "to": 3,
+   "fromPort": 0,
+   "toPort": 1
+  },
+  {
+   "from": 2,
+   "to": 3,
+   "fromPort": 0,
+   "toPort": 2
+  },
+  {
+   "from": 3,
+   "to": 4,
+   "fromPort": 0,
+   "toPort": 0
+  },
+  {
+   "from": 7,
+   "to": 5,
+   "fromPort": 0,
+   "toPort": 0
+  }
+ ],
+ "portalConfig": {
+  "1": {
+   "item": "logs",
+   "rate": 1
+  },
+  "7": {
+   "item": "logs",
+   "rate": 0.5
+  }
+ },
+ "zoneConfig": {
+  "1 Holzkette": {
+   "name": "1 Holzkette",
+   "color": "#3fb950"
+  },
+  "2 Ofen-Platz": {
+   "name": "2 Ofen-Platz",
+   "color": "#d29922"
+  }
+ },
+ "nextId": 8,
+ "centerPos": {
+  "x": 750,
+  "y": 550
+ },
+ "centerLabel": "Zentrum",
+ "factoryEfficiency": 100,
+ "beltCapacity": 60
+}

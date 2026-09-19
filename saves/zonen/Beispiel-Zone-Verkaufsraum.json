@@ -1,0 +1,66 @@
+{
+ "name": "Beispiel-Zone: Verkaufsraum (EG)",
+ "desc": "🇩🇪 2 Aufzüge + Verkaufsraum im Erdgeschoss — nimmt 30 große + 45 kleine Zahnräder/Min an. Zeigt: Verkauf nur im EG, die Ware kommt per Aufzug an.\n🇬🇧 2 lifts + sales room on the ground floor — takes 30 large + 45 small gears/min. Shows: selling only on GF, goods arrive via elevator.",
+ "app": "AlchemyFactoryEditor",
+ "v": 1,
+ "type": "zone",
+ "zone": "Verkaufsraum (EG)",
+ "savedAt": "2026-09-19T04:07:34.625Z",
+ "boxes": [
+  {
+   "id": 92,
+   "device": "Lift",
+   "recipe": "Lift",
+   "count": 1,
+   "floor": 0,
+   "x": 13350,
+   "y": 8750,
+   "liftPartner": 91,
+   "liftRole": "out",
+   "zone": "Verkaufsraum (EG)"
+  },
+  {
+   "id": 94,
+   "device": "Lift",
+   "recipe": "Lift",
+   "count": 1,
+   "floor": 0,
+   "x": 13350,
+   "y": 9250,
+   "liftRole": "out",
+   "liftPartner": 93,
+   "zone": "Verkaufsraum (EG)"
+  },
+  {
+   "id": 95,
+   "device": "Sales Room",
+   "recipe": "_sink",
+   "count": 1,
+   "floor": 0,
+   "x": 14500,
+   "y": 9050,
+   "zone": "Verkaufsraum (EG)"
+  }
+ ],
+ "connections": [
+  {
+   "from": 92,
+   "to": 95,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": []
+  },
+  {
+   "from": 94,
+   "to": 95,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": []
+  }
+ ],
+ "portalConfig": {},
+ "zoneConfig": {},
+ "nextId": 96,
+ "factoryEfficiency": 100,
+ "beltCapacity": 60
+}

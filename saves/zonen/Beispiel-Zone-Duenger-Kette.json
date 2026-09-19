@@ -1,0 +1,436 @@
+{
+ "name": "Beispiel-Zone: Dünger-Kette (Etage 2)",
+ "desc": "🇩🇪 Die komplette Dünger-Kette: 2 Pflanzbeete + Gärtnerei (60 Salbei/Min) → Lager → 2 Asche-Tiegel · Kalk: 2 Brecher → 6 Tiegel → 6 Schleifer → 2 Monteure = 30 Dünger/Min (Bedarf nur 5). Hochofen heizt mit Kohle (per Lift) + Stämmen. Spiel-gemessen 19.09.: Salbei 20/Min · Lein 30/Min · 1 Dünger je 12s je Gärtnerei.\n🇬🇧 The complete fertilizer chain: 2 seed plots + nursery (60 sage/min) → storage → 2 ash crucibles · lime: 2 crushers → 6 crucibles → 6 grinders → 2 assemblers = 30 fertilizer/min (demand only 5). Blast furnace heated with coal (via lift) + logs. Measured in-game Sep 2026: sage 20/min · flax 30/min · 1 fertilizer per 12s per nursery.",
+ "app": "AlchemyFactoryEditor",
+ "v": 1,
+ "type": "zone",
+ "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger",
+ "savedAt": "2026-09-19T04:08:34.711Z",
+ "boxes": [
+  {
+   "id": 69,
+   "device": "Lift",
+   "recipe": "Lift",
+   "count": 1,
+   "floor": 2,
+   "x": 6000,
+   "y": 2700,
+   "liftPartner": 68,
+   "liftRole": "out",
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 72,
+   "device": "Seed Plot",
+   "recipe": "Sage Seeds → Sage",
+   "count": 2,
+   "floor": 2,
+   "x": 8850,
+   "y": 3300,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 73,
+   "device": "Blast Furnace",
+   "recipe": "Holz (Logs)",
+   "count": 1,
+   "floor": 2,
+   "x": 11600,
+   "y": 2450,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 74,
+   "device": "Purchasing Portal",
+   "recipe": "_placeholder",
+   "count": 1,
+   "floor": 2,
+   "x": 7350,
+   "y": 2100,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 75,
+   "device": "Crucible",
+   "recipe": "Plant Ash",
+   "count": 1,
+   "floor": 2,
+   "x": 11600,
+   "y": 3200,
+   "furnaceId": 73,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 77,
+   "device": "Storage",
+   "recipe": "_sink",
+   "count": 1,
+   "floor": 2,
+   "x": 10450,
+   "y": 3400,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 79,
+   "device": "Stone Crusher",
+   "recipe": "Stone",
+   "count": 2,
+   "floor": 2,
+   "x": 9750,
+   "y": 4750,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 81,
+   "device": "Crucible",
+   "recipe": "Quicklime",
+   "count": 6,
+   "floor": 2,
+   "x": 11600,
+   "y": 4650,
+   "furnaceId": 73,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 82,
+   "device": "Purchasing Portal",
+   "recipe": "_placeholder",
+   "count": 2,
+   "floor": 2,
+   "x": 7100,
+   "y": 4600,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 84,
+   "device": "Assembler",
+   "recipe": "Basic Fertilizer",
+   "count": 1,
+   "floor": 2,
+   "x": 14800,
+   "y": 3300,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 86,
+   "device": "Grinder",
+   "recipe": "Quicklime Powder",
+   "count": 6,
+   "floor": 2,
+   "x": 12900,
+   "y": 4650,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 87,
+   "device": "Assembler",
+   "recipe": "Basic Fertilizer",
+   "count": 1,
+   "floor": 2,
+   "x": 15000,
+   "y": 4950,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 88,
+   "device": "Nursery",
+   "recipe": "Sage",
+   "count": 1,
+   "floor": 2,
+   "x": 8850,
+   "y": 4000,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 89,
+   "device": "Crucible",
+   "recipe": "Plant Ash",
+   "count": 1,
+   "floor": 2,
+   "x": 11600,
+   "y": 3950,
+   "furnaceId": 73,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  },
+  {
+   "id": 90,
+   "device": "Storage",
+   "recipe": "_sink",
+   "count": 1,
+   "floor": 2,
+   "x": 17250,
+   "y": 5000,
+   "zone": "Lift → Portal → Pflanzbeet & Gärtnerei → Hochofen & Schmelztiegel → Monteur → Dünger"
+  }
+ ],
+ "connections": [
+  {
+   "from": 74,
+   "to": 73,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c106"
+  },
+  {
+   "from": 69,
+   "to": 73,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c107"
+  },
+  {
+   "from": 72,
+   "to": 77,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c108"
+  },
+  {
+   "from": 72,
+   "to": 77,
+   "fromPort": 1,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c109"
+  },
+  {
+   "from": 77,
+   "to": 75,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c110"
+  },
+  {
+   "from": 79,
+   "to": 81,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c111"
+  },
+  {
+   "from": 82,
+   "to": 79,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c112"
+  },
+  {
+   "from": 75,
+   "to": 84,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c35"
+  },
+  {
+   "from": 81,
+   "to": 86,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c113"
+  },
+  {
+   "from": 86,
+   "to": 84,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c114"
+  },
+  {
+   "from": 79,
+   "to": 81,
+   "fromPort": 0,
+   "toPort": 1,
+   "waypoints": [],
+   "id": "c115"
+  },
+  {
+   "from": 81,
+   "to": 86,
+   "fromPort": 1,
+   "toPort": 1,
+   "waypoints": [],
+   "id": "c116"
+  },
+  {
+   "from": 86,
+   "to": 84,
+   "fromPort": 1,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c117"
+  },
+  {
+   "from": 79,
+   "to": 81,
+   "fromPort": 0,
+   "toPort": 2,
+   "waypoints": [],
+   "id": "c118"
+  },
+  {
+   "from": 81,
+   "to": 86,
+   "fromPort": 2,
+   "toPort": 2,
+   "waypoints": [],
+   "id": "c119"
+  },
+  {
+   "from": 86,
+   "to": 84,
+   "fromPort": 2,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c120"
+  },
+  {
+   "from": 81,
+   "to": 86,
+   "fromPort": 3,
+   "toPort": 3,
+   "waypoints": [],
+   "id": "c121"
+  },
+  {
+   "from": 81,
+   "to": 86,
+   "fromPort": 4,
+   "toPort": 4,
+   "waypoints": [],
+   "id": "c122"
+  },
+  {
+   "from": 81,
+   "to": 86,
+   "fromPort": 5,
+   "toPort": 5,
+   "waypoints": [],
+   "id": "c123"
+  },
+  {
+   "from": 79,
+   "to": 81,
+   "fromPort": 1,
+   "toPort": 3,
+   "waypoints": [],
+   "id": "c124"
+  },
+  {
+   "from": 79,
+   "to": 81,
+   "fromPort": 1,
+   "toPort": 4,
+   "waypoints": [],
+   "id": "c125"
+  },
+  {
+   "from": 79,
+   "to": 81,
+   "fromPort": 1,
+   "toPort": 5,
+   "waypoints": [],
+   "id": "c126"
+  },
+  {
+   "from": 82,
+   "to": 79,
+   "fromPort": 1,
+   "toPort": 1,
+   "waypoints": [],
+   "id": "c127"
+  },
+  {
+   "from": 86,
+   "to": 87,
+   "fromPort": 3,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c128"
+  },
+  {
+   "from": 86,
+   "to": 87,
+   "fromPort": 4,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c129"
+  },
+  {
+   "from": 86,
+   "to": 87,
+   "fromPort": 5,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c130"
+  },
+  {
+   "from": 88,
+   "to": 89,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c133"
+  },
+  {
+   "from": 84,
+   "to": 88,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [
+    {
+     "x": 15600,
+     "y": 3850
+    },
+    {
+     "x": 8550,
+     "y": 3900
+    }
+   ],
+   "id": "c132"
+  },
+  {
+   "from": 89,
+   "to": 87,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [
+    {
+     "x": 14400,
+     "y": 4250
+    }
+   ],
+   "id": "c134"
+  },
+  {
+   "from": 87,
+   "to": 90,
+   "fromPort": 0,
+   "toPort": 0,
+   "id": "c136",
+   "waypoints": []
+  }
+ ],
+ "portalConfig": {
+  "74": {
+   "item": "logs",
+   "rate": 1
+  },
+  "82": {
+   "item": "limestone",
+   "rate": 1
+  }
+ },
+ "zoneConfig": {},
+ "nextId": 96,
+ "factoryEfficiency": 100,
+ "beltCapacity": 60
+}

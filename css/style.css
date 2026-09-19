@@ -1,0 +1,368 @@
+
+/* ========== CSS VARIABLES (Dark & Light Mode) ========== */
+:root { /* V1.9.52: HELLERES DUNKEL (Vorlage GitHub "Dark Dimmed") — #0d1117 war zu dunkel (User: Augen strengen an) */
+  --bg-primary: #22272e;
+  --bg-secondary: #2d333b;
+  --bg-tertiary: #373e47;
+  --bg-canvas: #22272e;
+  --border: #444c56;
+  --border-light: #3d444d;
+  --text-primary: #cdd9e3;
+  --text-secondary: #98a3b0;
+  --text-muted: #87929e;
+  --accent-blue: #58a6ff;
+  --accent-green: #3fb950;
+  --accent-yellow: #d29922;
+  --accent-red: #f85149;
+  --accent-purple: #a371f7;
+  --lift-accent: #d8b4fe; /* V1.9.55: Lift-Texte — hell genug auf #22272e */
+  --accent-pink: #f778ba;
+  --grid-color: #2d333b;
+  --grid-color2: #282f38;
+  --shadow: rgba(0,0,0,.35);
+  --topbar-bg: #2d333b;
+  --panel-bg: #2d333b;
+  --dialog-bg: #2d333b;
+  --box-bg: #2d333b;
+  --statusbar-bg: #2d333b;
+}
+body.light { /* V1.9.52: HELLE GRAUSTUFE statt grellem #ffffff (User: "sehr extrem hell") — Vorlage: helle Flächen wie #f5f7f9, Karten minimal heller als Grund */
+  --bg-primary: #eef1f4;
+  --bg-secondary: #f5f7f9;
+  --bg-tertiary: #e6eaee;
+  --bg-canvas: #eaeef2;
+  --border: #c8d0d9;
+  --border-light: #e2e7ec;
+  --text-primary: #1f2328;
+  --text-secondary: #4c545d;
+  --text-muted: #656d76;
+  --accent-blue: #0969da;
+  --accent-green: #1a7f37;
+  --accent-yellow: #9a6700;
+  --accent-red: #cf222e;
+  --accent-purple: #8250df;
+  --lift-accent: #6d28d9; /* V1.9.55: Lift-Texte im HELLMODUS — #d8b4fe war kaum lesbar (User) */
+  --accent-pink: #bf3989;
+  --grid-color: #d8dee6;
+  --grid-color2: #e7ebf0;
+  --shadow: rgba(0,0,0,.12);
+  --topbar-bg: #e6eaef;
+  --panel-bg: #f5f7f9;
+  --dialog-bg: #f5f7f9;
+  --box-bg: #f9fafb;
+  --statusbar-bg: #e6eaef;
+}
+
+/* ========== GLOBAL RESET ========== */
+*{margin:0;padding:0;box-sizing:border-box}
+/* ANTI-MARKIER-FIX: Keine HTML-Textauswahl auf dem Canvas/Boxen - nur in
+   Eingabefeldern darf Text markiert werden. Behebt das leidige "alles ist
+   blau markiert" beim Ziehen von Boxen und das Springen beim Rand-Überschreiten. */
+.jlink{color:var(--accent-blue);cursor:pointer;text-decoration:underline dotted;text-underline-offset:3px;font-weight:600} /* V1.9.53: Status-Sprung-Links */
+.jlink:hover{filter:brightness(1.3);text-decoration-style:solid}
+body{font-family:'Segoe UI',Tahoma,sans-serif;background:var(--bg-primary);color:var(--text-primary);overflow:hidden;height:100vh;-webkit-user-select:none;user-select:none}
+input,textarea,select{user-select:text;-webkit-user-select:text}
+canvas{-webkit-user-select:none;user-select:none}
+
+/* ========== TOPBAR ========== */
+.topbar{position:fixed;top:0;left:0;right:0;height:50px;background:var(--topbar-bg);border-bottom:1px solid var(--border);display:flex;align-items:center;padding:0 14px;z-index:100;gap:6px;overflow-x:auto;box-shadow:0 2px 6px var(--shadow)}
+.topbar h1{font-size:15px;font-weight:700;background:linear-gradient(90deg,var(--accent-blue),var(--accent-purple));-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap;margin-right:4px;letter-spacing:.2px}
+.topbar button{background:var(--bg-tertiary);color:var(--text-primary);border:1px solid var(--border);padding:8px 14px;border-radius:8px;cursor:pointer;font-size:13px;white-space:nowrap;flex-shrink:0;transition:all .15s}
+.topbar button.icon-btn{padding:8px 12px;font-size:17px;min-width:40px;text-align:center}
+.topbar button:hover{background:var(--border);border-color:var(--accent-blue);transform:translateY(-1px)}
+.topbar button:active{transform:translateY(0)}
+.topbar-sep{width:1px;align-self:stretch;background:var(--border);flex-shrink:0;margin:9px 3px}
+.topbar .info{margin-left:auto;font-size:11px;color:var(--text-secondary);text-align:right;max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex-shrink:0}
+
+/* ========== LEFT PANEL ========== */
+/* V1.5.1: Sidebar endgültig weg — Karte in voller Breite */
+.leftpanel h3{padding:12px 14px;color:var(--accent-blue);font-size:12.5px;font-weight:700;letter-spacing:.3px;text-transform:uppercase;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--panel-bg);z-index:1}
+.leftpanel .search{width:100%;padding:10px 14px;background:var(--bg-primary);border:none;color:var(--text-primary);border-bottom:1px solid var(--border);font-size:13px;outline:none}
+.leftpanel .search:focus{background:var(--bg-secondary)}
+.leftpanel .search::placeholder{color:var(--text-muted)}
+.machine-list{padding:6px}
+.cattabs{padding:8px 10px}
+.cattabs select{width:100%;padding:8px 10px;background:var(--bg-primary);color:var(--text-primary);border:1px solid var(--border);border-radius:8px;font-size:12px;cursor:pointer;outline:none;font-weight:600}
+.cattabs select:focus{border-color:var(--accent-blue)}
+.cattab{display:none}
+.mi{padding:12px;margin:6px 6px;background:var(--bg-secondary);border-radius:8px;cursor:pointer;font-size:14px;border:1px solid transparent;border-left:3px solid var(--border);transition:all .15s}
+
+.mi:hover{background:var(--bg-tertiary);border-left-color:var(--accent-blue);border-color:var(--border);transform:translateX(2px);box-shadow:0 2px 8px var(--shadow)}
+.mi .de{font-weight:600;color:var(--text-primary);font-size:15px}
+.mi .en{color:var(--text-muted);font-size:12px;margin-top:2px;font-style:italic}
+
+/* ========== CANVAS AREA ========== */
+.canvas-area{position:fixed;top:50px;left:0;right:0;bottom:0;overflow:auto;background:var(--bg-canvas)} /* V1.6.1: Karte bis ganz unten — kein Footer mehr */
+
+/* ========== ZOOM CONTROLS ========== */
+/* V1.3.3: EINE rechte Säule (Zoom + Werkzeuge + Etagen) — mittig, einheitlich */
+/* V1.4.2: rechte Säule entfernt — alles unten in der Befehlsleiste */
+
+/* ========== CANVAS & GRID ========== */
+canvas#connCanvas{position:absolute;top:0;left:0;pointer-events:none;z-index:15}
+#boxesContainer{position:relative;z-index:2;transform-origin:0 0;min-height:100%;min-width:100%;
+  background-image:linear-gradient(var(--grid-color) 1px,transparent 1px),linear-gradient(90deg,var(--grid-color) 1px,transparent 1px);
+  background-size:50px 50px;background-position:0 0} /* V1.4.1: Raster halbiert */
+
+/* ========== CENTER MARKER ========== */
+.center-marker{position:absolute;width:200px;height:200px;border:2px dashed var(--accent-purple);border-radius:50%;pointer-events:none;z-index:0;display:flex;align-items:center;justify-content:center}
+.center-marker .clbl{background:var(--bg-secondary);padding:4px 10px;border-radius:6px;font-size:11px;color:var(--accent-purple);font-weight:600;white-space:nowrap}
+
+/* ========== MACHINE BOXES ========== */
+.mbox{position:absolute;width:calc(var(--u,1.25) * 460px);background:var(--box-bg);border:1px solid var(--border);border-radius:9px;padding:calc(var(--u,1.25) * 10px) calc(var(--u,1.25) * 24px);cursor:move;z-index:10;box-shadow:0 3px 10px var(--shadow)} /* V1.9.0: breiter + Innenabstand links/rechts, damit Anschlüsse NICHTS verdecken */
+.mbox.zoned{border-left-width:4px}
+.mbox.selected{border-color:var(--accent-blue);box-shadow:0 0 12px rgba(88,166,255,.35)}
+.mbox.groupsel{border-color:var(--accent-green);box-shadow:0 0 10px rgba(63,185,80,.4)}
+#marqueeBox{position:absolute;border:1px dashed var(--accent-blue);background:rgba(88,166,255,.1);z-index:30;pointer-events:none}
+.mbox .mh{display:flex;justify-content:space-between;align-items:center;margin-bottom:calc(var(--u,1.25) * 5px);padding-bottom:calc(var(--u,1.25) * 4px);border-bottom:1px solid var(--border-light)}
+.mbox .mt{font-weight:700;font-size:calc(var(--u,1.25) * 14px);color:var(--accent-blue)}
+.mbox .mc{cursor:pointer;color:var(--text-muted);font-size:calc(var(--u,1.25) * 14px);line-height:1;min-width:calc(var(--u,1.25) * 22px);min-height:calc(var(--u,1.25) * 22px);display:inline-flex;align-items:center;justify-content:center;border-radius:6px}
+.mbox .mc:hover{color:var(--accent-red);background:rgba(248,81,73,.12)}
+.mbox .mr{margin:calc(var(--u,1.25) * 2.5px) 0;font-size:calc(var(--u,1.25) * 12px);line-height:1.4}
+.mbox .ml{color:var(--text-secondary)}
+.mbox .mv{font-weight:600}
+.mbox .mv.out{color:var(--accent-green)}
+.mbox .mv.inp{color:var(--accent-yellow)}
+.mbox .mb{margin-top:calc(var(--u,1.25) * 5px);padding:calc(var(--u,1.25) * 4px) calc(var(--u,1.25) * 8px);border-radius:4px;font-size:calc(var(--u,1.25) * 11px);font-weight:600;text-align:center}
+.mbox .mb.ok{background:rgba(63,185,80,.15);color:var(--accent-green)}
+.mbox .mb.warn{background:rgba(210,153,34,.15);color:var(--accent-yellow)}
+.mbox .mb.bad{background:rgba(248,81,73,.15);color:var(--accent-red)}
+.mbox .cc{display:flex;align-items:center;gap:calc(var(--u,1.25) * 6px);margin-top:calc(var(--u,1.25) * 6px);padding-top:calc(var(--u,1.25) * 4px);border-top:1px solid var(--border-light)}
+.mbox .cc button{width:calc(var(--u,1.25) * 26px);height:calc(var(--u,1.25) * 26px);background:var(--bg-tertiary);color:var(--text-primary);border:1px solid var(--border);border-radius:6px;cursor:pointer;font-size:calc(var(--u,1.25) * 14px);display:flex;align-items:center;justify-content:center}
+.mbox .cc button:hover{background:var(--border);border-color:var(--accent-blue)}
+.mbox .cc .cnt{font-size:calc(var(--u,1.25) * 13px);font-weight:700;min-width:calc(var(--u,1.25) * 20px);text-align:center}
+.mbox .cc .al{margin-left:auto;font-size:calc(var(--u,1.25) * 10.5px);color:var(--text-secondary)}
+.mbox select{width:100%;background:var(--bg-primary);color:var(--text-primary);border:1px solid var(--border);padding:calc(var(--u,1.25) * 4px) calc(var(--u,1.25) * 6px);border-radius:6px;font-size:calc(var(--u,1.25) * 12.5px) !important;margin:calc(var(--u,1.25) * 4px) 0} /* V1.4.3: skaliert mit A/A+/A++ */
+.mbox input[type=number],.mbox input[type=text]{font-size:calc(var(--u,1.25) * 14px) !important;padding:calc(var(--u,1.25) * 4px) calc(var(--u,1.25) * 6px)}
+.mbox .conn{position:absolute;width:calc(var(--u,1.25) * 30px);height:calc(var(--u,1.25) * 30px);border-radius:50%;cursor:crosshair;z-index:20;transition:all .15s;display:flex;align-items:center;justify-content:center;font-size:calc(var(--u,1.25) * 12px);font-weight:700;color:#fff}
+.mbox .conn:hover{transform:scale(1.2);filter:brightness(1.2)}
+.mbox .conn.inp{left:calc(var(--u,1.25) * -15px);background:#0891b2;border:2px solid #22d3ee}
+.mbox .conn.out{right:calc(var(--u,1.25) * -15px);background:#16a34a;border:2px solid #22c55e}
+.mbox .conn.conn-ok.inp{background:#0891b2;border-color:#22d3ee}
+.mbox .conn.conn-ok.out{background:#16a34a;border-color:#22c55e}
+.mbox .conn.conn-part{background:#b45309;border-color:#fbbf24}
+.mbox .conn.conn-bad.inp{background:#dc2626;border-color:#f87171}
+.mbox .conn.conn-bad.out{background:#dc2626;border-color:#f87171}
+.mbox .conn.conn-used{opacity:1}
+.mbox .conn.conn-unused{opacity:.35;border-style:dashed}
+.mbox .conn.conn-liquid.conn-ok{background:#0284c7;border-color:#38bdf8}
+.mbox .conn.conn-liquid.conn-bad{background:#dc2626;border-color:#f87171}
+
+/* ========== STATUS BAR ========== */
+/* ========== V1.6.1: KEIN FOOTER — Mini-Pills links/rechts (Upload-Labs-Prinzip) ========== */
+/* V1.7.0: schlaue Seiten-Icons — Aufklappmenüs gehen nach LINKS */
+.edge-sep{height:1px;background:var(--border);margin:4px 6px}
+.edge-fly{position:fixed;z-index:150;background:var(--panel-bg);border:1px solid var(--border);border-radius:12px;padding:10px;box-shadow:0 8px 28px var(--shadow);display:flex;flex-direction:column;gap:6px;min-width:120px}
+.edge-fly button{height:38px;padding:0 14px;background:var(--bg-tertiary);border:1px solid var(--border);border-radius:8px;color:var(--text-primary);cursor:pointer;font-size:14px;font-weight:700;white-space:nowrap}
+.edge-fly button:hover{border-color:var(--accent-blue)}
+.edge-fly button.active-ui{background:linear-gradient(135deg,#1f6feb,#388bfd);border-color:transparent;color:#fff}
+.edge-fly .fly-row{display:flex;gap:6px}
+.edge-fly .fly-info{font-size:13.5px;color:var(--text-primary);line-height:1.6;max-width:320px;white-space:pre-wrap}
+/* V1.7.0: Status-Pille entfernt — Infos leben im 🛈 der rechten Seite */
+.status-pill-alt{position:fixed;bottom:12px;left:12px;z-index:130;max-width:34vw;background:var(--statusbar-bg);border:1px solid var(--border);border-radius:10px;padding:7px 12px;font-size:12.5px;color:var(--text-secondary);cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;box-shadow:0 2px 8px var(--shadow)}
+.status-pill:hover{border-color:var(--accent-blue)}
+.edge-pill{position:fixed;right:12px;top:50%;transform:translateY(-50%);z-index:130;display:flex;flex-direction:column;gap:5px}
+.edge-pill button{width:44px;height:44px;background:var(--bg-secondary);color:var(--text-primary);border:1px solid var(--border);border-radius:10px;cursor:pointer;font-size:21px;font-weight:700;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 6px var(--shadow)} /* V1.9.4: alle gleich groß — auch 🛈/🗑️/🧲 */
+.edge-pill button:hover{border-color:var(--accent-blue)}
+
+
+/* ========== DIALOGS ========== */
+.dlg{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);z-index:200;display:flex;align-items:center;justify-content:center;animation:fadeIn .15s ease}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.dlg .box{background:var(--dialog-bg);border:1px solid var(--border);border-radius:12px;padding:20px;width:440px;max-width:94vw;max-height:88vh;overflow-y:auto;box-shadow:0 8px 32px rgba(0,0,0,.4);animation:slideUp .2s ease}
+@keyframes slideUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.dlg h3{color:var(--accent-blue);margin-bottom:12px;font-size:16px}
+.dlg label{display:block;margin:8px 0 3px;font-size:13px;color:var(--text-secondary)}
+.dlg input,.dlg select{width:100%;padding:8px;background:var(--bg-primary);border:1px solid var(--border);color:var(--text-primary);border-radius:4px;font-size:13px}
+.dlg .btns{display:flex;gap:8px;margin-top:14px}
+.dlg .btns button{flex:1;padding:7px;border:1px solid var(--border);border-radius:4px;cursor:pointer;font-size:12px}
+.dlg .btns .ok{background:#238636;color:#fff;border-color:#238636}
+.dlg .btns .no{background:var(--bg-tertiary);color:var(--text-primary)}
+
+/* ========== ROADMAP ========== */
+.roadmap{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.75);z-index:300;display:flex;align-items:flex-start;justify-content:center;overflow-y:auto;padding:20px;animation:fadeIn .15s ease}
+.roadmap .rbox{background:var(--dialog-bg);border:1px solid var(--border);border-radius:12px;padding:24px;width:900px;max-width:95vw;max-height:90vh;overflow-y:auto;box-shadow:0 8px 32px rgba(0,0,0,.5);animation:slideUp .25s ease}
+.roadmap h2{color:var(--accent-blue);margin-bottom:16px;font-size:18px;border-bottom:1px solid var(--border);padding-bottom:10px}
+.roadmap .rchain{margin:12px 0;padding:12px;background:var(--bg-primary);border-radius:8px;border-left:3px solid var(--accent-green)}
+.roadmap .rchain .rname{font-weight:700;color:var(--accent-blue);font-size:14px}
+.roadmap .rchain .rrecipe{font-size:11px;color:var(--accent-yellow);margin:4px 0}
+.roadmap .rchain .rinfo{font-size:11px;color:var(--text-secondary)}
+.roadmap .rchain .riom{display:flex;gap:12px;margin-top:6px;font-size:11px}
+.roadmap .rchain .riom .rin{color:var(--accent-yellow)}
+.roadmap .rchain .riom .rout{color:var(--accent-green)}
+.roadmap .rconn{color:var(--accent-blue);text-align:center;font-size:20px;margin:4px 0}
+.roadmap .rsummary{margin-top:16px;padding:12px;background:var(--bg-primary);border-radius:8px;border:1px solid var(--border)}
+.roadmap .rsummary h3{color:var(--accent-blue);font-size:14px;margin-bottom:8px}
+.roadmap .rsummary .ritem{display:flex;justify-content:space-between;padding:3px 0;font-size:12px;border-bottom:1px solid var(--border-light)}
+.roadmap .rsummary .ritem .rval{color:var(--accent-green);font-weight:600}
+.roadmap .rclose{position:sticky;top:0;float:right;background:var(--bg-tertiary);color:var(--text-primary);border:1px solid var(--border);padding:6px 14px;border-radius:6px;cursor:pointer;font-size:12px;z-index:1}
+.roadmap .rclose:hover{background:var(--accent-red);border-color:var(--accent-red)}
+.roadmap .rauto{display:flex;gap:8px;margin:12px 0}
+.roadmap .rauto button{padding:8px 16px;background:#238636;color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:12px;font-weight:600}
+.roadmap .rauto button:hover{background:#2ea043}
+
+/* ========== SCROLLBARS ========== */
+::-webkit-scrollbar{width:6px;height:6px}
+::-webkit-scrollbar-track{background:var(--bg-primary)}
+::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+
+/* ========== THEME TOGGLE ========== */
+.theme-toggle{display:inline-flex;border:1px solid var(--border);border-radius:6px;overflow:hidden;margin-left:4px}
+.theme-toggle button{padding:6px 12px;font-size:12.5px;border:none;cursor:pointer;font-weight:700;transition:all .15s;background:var(--bg-tertiary);color:var(--text-secondary)}
+.theme-toggle button.active{background:var(--accent-blue);color:#fff}
+.theme-toggle button:hover:not(.active){background:var(--border)}
+
+/* ========== CONVEYOR BELT ANIMATION ========== */
+@keyframes beltFlow {
+  0%{stroke-dashoffset:0}
+  100%{stroke-dashoffset:-24}
+}
+@keyframes beltFlowLoop {
+  0%{stroke-dashoffset:0}
+  100%{stroke-dashoffset:-16}
+}
+
+/* ========== LIGHT MODE OVERRIDES FOR DYNAMIC ELEMENTS ========== */
+body.light .topbar{background:#e6eaef;border-bottom-color:#c8d0d9}
+body.light .leftpanel{background:#e6eaef;border-right-color:#c8d0d9}
+body.light .mbox{box-shadow:0 2px 8px rgba(0,0,0,.08)}
+body.light .topbar button{background:#f5f7f9;color:#1f2328;border-color:#c8d0d9}
+body.light .topbar button:hover{background:#eaeef2;border-color:#0969da}
+body.light .mi:hover{background:#f6f8fa;box-shadow:0 1px 3px rgba(0,0,0,.08)}
+body.light .cattab{background:#f5f7f9;color:#4c545d;border-color:#c8d0d9}
+body.light .cattab:hover{background:#eaeef2;color:#24292f}
+body.light .roadmap .rclose{background:#f6f8fa;color:#24292f;border-color:#d0d7de}
+body.light .roadmap .rclose:hover{background:#cf222e;color:#fff}
+body.light .mbox{background:#eef1f5;border-color:#aeb9c4;box-shadow:0 2px 8px rgba(0,0,0,.14)}
+body.light .mbox .mh{border-bottom-color:#eaeef2}
+body.light .mbox .cc{border-top-color:#eaeef2}
+body.light .mbox .cc button{background:#f6f8fa;color:#24292f;border-color:#d0d7de}
+body.light .mbox .cc button:hover{background:#eaeef2;border-color:#0969da}
+body.light .mbox select{background:#f6f8fa;color:#24292f;border-color:#d0d7de}
+body.light .mbox .conn.inp{background:#0891b2;border-color:#06b6d4}
+body.light .mbox .conn.out{background:#16a34a;border-color:#22c55e}
+body.light .mbox .conn.conn-bad.inp,body.light .mbox .conn.conn-bad.out{background:#dc2626;border-color:#ef4444}
+body.light .status-pill{background:#f6f8fa;border-color:#d0d7de}
+body.light .edge-pill button{background:#f6f8fa;color:#24292f;border-color:#d0d7de}
+body.light .dlg .box{background:#ffffff;border-color:#d0d7de}
+body.light .dlg input,.body.light .dlg select{background:#f6f8fa;color:#24292f;border-color:#d0d7de}
+body.light .roadmap .rbox{background:#ffffff;border-color:#d0d7de}
+body.light .roadmap .rchain{background:#f6f8fa}
+body.light .roadmap .rsummary{background:#f6f8fa;border-color:#d0d7de}
+body.light .theme-toggle button{background:#f6f8fa;color:#57606a}
+body.light .theme-toggle button.active{background:#0969da;color:#fff}
+body.light .mi{background:#f6f8fa;border-left-color:#d0d7de}
+body.light .mi:hover{background:#eaeef2}
+body.light .cattab.active{background:#0969da;color:#fff}
+body.light canvas#connCanvas{opacity:1}
+
+/* ========== RELEASE-UI: HOTBAR statt Sidebar ========== */
+.hotbar{position:fixed;bottom:14px;left:50%;transform:translateX(-50%);z-index:120;display:flex;gap:12px;background:var(--topbar-bg);border:1px solid var(--border);border-radius:18px;padding:12px 16px;box-shadow:0 6px 20px var(--shadow)} /* V1.7.0: mehr Abstand zwischen den Kategorien */
+.hotbar button{display:flex;flex-direction:column;align-items:center;gap:4px;background:var(--bg-tertiary);border:1px solid var(--border);border-radius:12px;padding:10px 16px;cursor:pointer;font-size:25px;transition:all .15s;min-width:82px}
+.hotbar button small{font-size:11px;color:var(--text-secondary);font-weight:600;letter-spacing:.2px}
+.hotbar button:hover{border-color:var(--accent-blue);transform:translateY(-3px);box-shadow:0 4px 10px var(--shadow)}
+.hotbar button.active{background:var(--accent-blue);border-color:var(--accent-blue)}
+.hotbar button.active small{color:#fff}
+.machine-picker{position:fixed;bottom:104px;left:50%;transform:translateX(-50%);z-index:121;width:min(1020px,96vw); /* V1.5.1: breiter — DAS Maschinen-Menü */background:var(--panel-bg);border:1px solid var(--border);border-radius:14px;padding:14px;box-shadow:0 10px 32px var(--shadow);animation:slideUp .18s ease}
+.machine-picker .mp-head{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.machine-picker .mp-head h4{font-size:14px;color:var(--accent-blue)}
+.machine-picker input{flex:1;padding:9px 12px;background:var(--bg-primary);border:1px solid var(--border);border-radius:8px;color:var(--text-primary);font-size:14px;outline:none}
+.mp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:10px;max-height:48vh;overflow-y:auto}
+.mp-grid .mp-item{display:flex;flex-direction:column;align-items:center;gap:6px;background:var(--bg-secondary);border:1px solid var(--border);border-radius:10px;padding:12px 8px;cursor:pointer;transition:all .12s;text-align:center}
+.mp-grid .mp-item:hover{border-color:var(--accent-blue);transform:translateY(-2px);background:var(--bg-tertiary)}
+.mp-grid .mp-item .ic{font-size:30px}
+.mp-grid .mp-item .nm{font-size:13px;font-weight:600;color:var(--text-primary);line-height:1.25}
+.mp-grid .mp-item .ht{font-size:10.5px;color:var(--accent-yellow)}
+/* V1.6.1: ℹ️-Fenster & ℹ️-Knopf (beim Sidebar-Rückbau versehentlich gelöscht — wieder da) */
+.hintpop{position:fixed;z-index:200;width:min(430px,92vw);background:var(--panel-bg);border:1px solid var(--accent-blue);border-radius:12px;padding:14px;box-shadow:0 10px 30px var(--shadow);font-size:14px;line-height:1.6;color:var(--text-primary)}
+.hintpop h4{margin:0 0 6px;font-size:15px;color:var(--accent-blue)}
+.hintpop-drag{cursor:grab;user-select:none;border-bottom:1px solid var(--border);margin:-4px -6px 8px;padding:2px 6px 8px;font-size:15px;color:var(--accent-blue);font-weight:700} /* V1.9.5: Farb-Fenster an der Titelleiste verschiebbar */
+.minfo{cursor:help;color:var(--text-muted);font-size:13px;margin-left:4px;padding:1px 5px;border-radius:6px;background:var(--bg-tertiary);border:1px solid var(--border)}
+.minfo:hover{color:var(--accent-blue);border-color:var(--accent-blue)}
+/* Header-Badge & Einklappen */
+.hdr-badge{font-size:9.5px;color:var(--text-secondary);background:var(--bg-tertiary);border:1px solid var(--border);padding:3px 8px;border-radius:10px;white-space:nowrap}
+body.nohdr .topbar{transform:translateY(-100%)}
+body.nohdr .canvas-area{top:0}
+.hdr-restore{position:fixed;top:10px;right:10px;z-index:130;display:none;background:var(--bg-secondary);border:1px solid var(--accent-blue);border-radius:10px;color:var(--accent-blue);width:42px;height:42px;font-size:19px;cursor:pointer;box-shadow:0 4px 14px var(--shadow);display:none;align-items:center;justify-content:center} /* V1.8.0: sauber gestaltet */
+body.nohdr .hdr-restore{display:flex}
+.edge-pill button#snapBtn.on{background:linear-gradient(135deg,#16a34a,#22c55e)!important;border:2px solid #22c55e!important;color:#fff!important;font-weight:800;box-shadow:0 0 0 3px rgba(34,197,94,.30),0 2px 10px rgba(34,197,94,.4)} /* V1.9.5: Zustand jetzt KLASSEN-basiert — Inline-Styles sind raus */
+.topbar button.hdr-collapse{border:1px solid rgba(88,166,255,.4);color:#58a6ff;background:rgba(88,166,255,.08);border-radius:10px;padding:0 16px;height:34px;font-size:13px;font-weight:700;cursor:pointer;margin-left:auto;white-space:nowrap} /* V1.9.45: beschrifteter Knopf GANZ RECHTS — gleiche Stelle wie das ☰ beim Wieder-Anzeigen (User-Wunsch: nicht raten müssen) */
+.topbar button.hdr-collapse:hover{background:rgba(88,166,255,.18)}
+/* V1.8.0: Kontext-Menü der Markierung (Leiste unten wird zum Box-Menü) */
+/* V1.9.2: Kontext-Knöpfe HELL & farbig — nichts mehr dunkel auf dunkel */
+.hotbar .ctx-title{display:flex;align-items:center;gap:6px;padding:6px 10px;font-size:12.5px;font-weight:800;color:var(--accent-blue);background:rgba(88,166,255,.14);border:1px solid rgba(88,166,255,.45);border-radius:10px;max-width:min(480px,46vw);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer;text-decoration:underline dotted;text-underline-offset:3px} /* V1.9.64: kompakt + doppelt so breit — kein Abschneiden mehr (User-Fund) */ /* V1.9.47: Titel ist LINK — Klick öffnet Info-Fenster über der Leiste */
+.hotbar button.ctxb{background:rgba(139,148,158,.14);border:1px solid rgba(139,148,158,.45);color:var(--text-primary)} /* V1.9.52: war #f0f6fc = WEISS AUF WEISS im Hellmodus */
+.hotbar button.ctxb small{color:var(--text-secondary);font-weight:700;font-size:10px}
+.hotbar button.ctxb{padding:7px 11px;font-size:19px;min-width:56px} /* V1.9.64: schlanke Kontext-Buttons (User: zu groß, zu viel Text) */
+.hotbar button.ctxb.blue{background:rgba(88,166,255,.14);border-color:rgba(88,166,255,.5)}
+.hotbar button.ctxb.green{background:rgba(63,185,80,.16);border-color:rgba(63,185,80,.5)}
+.hotbar button.ctxb.purple{background:rgba(163,113,247,.16);border-color:rgba(163,113,247,.5)}
+.hotbar button.ctxb.red{background:rgba(248,81,73,.16);border-color:rgba(248,81,73,.5)}
+.hotbar button.ctxb:hover{filter:brightness(1.25);transform:translateY(-2px)}
+body.nohdr .hdr-restore{display:block}
+/* Zonen-Info schwebendes Fenster */
+.zonepanel{position:fixed;top:70px;right:14px;z-index:140;width:660px;background:var(--panel-bg);border:1px solid var(--border);border-radius:12px;box-shadow:0 8px 26px var(--shadow);animation:slideUp .18s ease}
+.zonepanel .zp-head{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--border);cursor:move;user-select:none}
+.zonepanel .zp-head b{font-size:13px;color:var(--accent-blue)}
+.zonepanel .zp-body{max-height:64vh;overflow-y:auto;padding:14px 16px;font-size:14px;line-height:1.65} /* V1.9.43: Fabrik-Status klotziger — mehr Luft, größere Basis, mehr Inhalt sichtbar */
+.zonepanel .zcard{background:var(--bg-primary);border:1px solid var(--border);border-left:4px solid var(--accent-blue);border-radius:8px;padding:10px 12px;margin-bottom:10px;font-size:13px}
+.zonepanel .zcard .zt{font-weight:700;font-size:14.5px;display:flex;align-items:center;gap:6px;margin-bottom:3px}
+.zonepanel .zcard .zdot{width:10px;height:10px;border-radius:3px;display:inline-block}
+.zonepanel .zcard .zrow{display:flex;justify-content:space-between;color:var(--text-secondary);padding:2px 0;font-size:13px}
+.zonepanel .zcard .zout{color:var(--accent-green);font-weight:600}
+.zonepanel .zcard .zin{color:var(--accent-yellow);font-weight:600}
+/* Canvas/Statusbar ohne Sidebar */
+.canvas-area{top:50px;left:0}
+/* V1.6.1: Footer komplett entfernt */
+#selInfo{left:12px !important}
+/* Werkzeuge-Dialog Grid */
+.tools-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.tools-grid button{display:flex;align-items:center;gap:10px;padding:14px;background:var(--bg-primary);border:1px solid var(--border);border-radius:10px;color:var(--text-primary);cursor:pointer;font-size:14.5px;font-weight:600;text-align:left;transition:all .12s}
+.tools-grid button:hover{border-color:var(--accent-blue);background:var(--bg-tertiary)}
+.tools-grid button.danger{color:var(--accent-red)}
+.save-list button{display:flex;align-items:center;gap:8px;width:100%;padding:10px 12px;margin:4px 0;background:var(--bg-primary);border:1px solid var(--border);border-radius:8px;color:var(--text-primary);cursor:pointer;font-size:12.5px;text-align:left}
+.save-list button:hover{border-color:var(--accent-blue)}
+.folder-ok{color:var(--accent-green);font-weight:600}
+.folder-no{color:var(--accent-yellow);font-weight:600}
+
+/* ========== V1.1: Icon-Säule rechts (aus dem Header ausgelagert) ========== */
+/* V1.4.2: rechte Säule entfernt — alles unten in der Befehlsleiste */
+/* Zonen-/Status-Fenster etwas weiter nach links, damit die Säule frei bleibt */
+.zonepanel{top:70px;right:66px}
+body.light .side-tools button{background:#f6f8fa;color:#24292f;border-color:#d0d7de}
+body.light .side-tools .zlvl{background:#f6f8fa;color:#57606a;border-color:#d0d7de}
+
+/* ========== V1.2: Etagen-Widget in der Icon-Saeule ========== */
+.side-sep{height:1px;background:var(--border);margin:4px 6px}
+.side-tools .floor-btn{font-size:15px;font-weight:800;height:36px;width:44px}
+.side-tools .floor-lbl{height:30px;width:44px;font-size:12px;font-weight:800;color:var(--accent-blue);border-color:var(--accent-blue);background:rgba(88,166,255,.08)}
+
+/* V1.3.9: Beta-Kennzeichnung */
+.hdr-badge.beta:hover{background:rgba(251,191,36,.22)}
+
+/* ==== V1.9.42: Linien-Modus sichtbar machen — Magnet-Ziele leuchten, auch unbenutzte Ports ==== */
+body.connmode .mbox .conn.inp{opacity:1;box-shadow:0 0 0 3px rgba(34,211,238,.5);border-width:2.5px}
+body.connmode .mbox .conn.inp.conn-unused{border-style:solid}
+body.light.connmode .mbox .conn.inp{box-shadow:0 0 0 3px rgba(8,145,178,.55)}
+
+/* ==== V1.9.44: Eingaben bei JEDER Größe klickbar — Spinner nutzbar, nichts abgeschnitten ==== */
+.mbox input[type=number]{min-height:calc(var(--u,1.25) * 30px);min-width:calc(var(--u,1.25) * 52px)}
+.mbox select{min-height:calc(var(--u,1.25) * 26px)}
+
+/* ==== V1.9.45: Hotbar-Kurzwerte — auf einen Blick, ohne Hineinzoomen ==== */
+.hotbar .ctx-stats{max-width:min(420px,34vw);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--text-secondary);font-size:13px;font-weight:600;padding:8px 12px;background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.25);border-radius:12px}
+
+/* ==== V1.9.46: Linien-Menü — Weiche/Punkt-Buttons, gedimmte Hinweise ==== */
+.hotbar .ctxb.dim{opacity:.45;cursor:help}
+
+/* ==== V1.9.47: Info-Fenster über dem Menü + Abstände poliert ==== */
+.menu-info-pop{position:fixed;z-index:210;background:var(--panel-bg);border:1px solid var(--accent-blue);border-radius:12px;padding:12px 16px;max-width:min(560px,92vw);box-shadow:0 10px 30px var(--shadow);font-size:14px;line-height:1.7;color:var(--text-primary)}
+.menu-info-pop b{color:var(--accent-blue)}
+.menu-info-pop .mip-hint{color:var(--text-secondary);font-size:12.5px;margin-top:6px}
+.hotbar .ctx-stats{max-width:min(460px,38vw);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--text-secondary);font-size:11px;font-weight:600;padding:5px 9px;background:rgba(88,166,255,.08);border:1px solid rgba(88,166,255,.25);border-radius:9px;align-self:center} /* V1.9.64 */
+.hotbar button{padding:9px 14px;font-size:23px;min-width:78px}
+.hotbar button small{font-size:11.5px}
+.machine-picker{padding:16px}
+.machine-picker .mp-head{margin-bottom:12px}
+.mp-grid{gap:12px}
+.mp-grid .mp-item{padding:12px 10px}

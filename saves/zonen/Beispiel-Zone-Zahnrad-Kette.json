@@ -1,0 +1,193 @@
+{
+ "name": "Beispiel-Zone: Zahnrad-Kette",
+ "desc": "🇩🇪 Portal → Säge → 3 Schleifer → 3 Monteure → Lager · 45 kleine Zahnräder/Min (Stufe 0). LERN-EFFEKT: 1 Monteur braucht nur 5 große Räder/Min — die Schleifer laufen teilentlastet (gelb).\n🇬🇧 Portal → saw → 3 grinders → 3 processors → storage · 45 small gears/min (level 0). Learning: one processor only needs 5 large gears/min — the grinders run partially loaded (yellow).",
+ "app": "AlchemyFactoryEditor",
+ "v": 1,
+ "type": "zone",
+ "zone": "Portal → Säge → 3 Schleifer → 3 Monteure → Lager",
+ "savedAt": "2026-09-19T04:03:22.523Z",
+ "boxes": [
+  {
+   "id": 23,
+   "device": "Purchasing Portal",
+   "recipe": "_placeholder",
+   "count": 1,
+   "floor": 1,
+   "x": 600,
+   "y": 9900,
+   "zone": "Portal → Säge → 3 Schleifer → 3 Monteure → Lager"
+  },
+  {
+   "id": 24,
+   "device": "Table Saw",
+   "recipe": "Plank",
+   "count": 1,
+   "floor": 1,
+   "x": 1800,
+   "y": 9950,
+   "zone": "Portal → Säge → 3 Schleifer → 3 Monteure → Lager"
+  },
+  {
+   "id": 25,
+   "device": "Grinder",
+   "recipe": "Large Wooden Gear",
+   "count": 1,
+   "floor": 1,
+   "x": 3000,
+   "y": 9500,
+   "zone": "Portal → Säge → 3 Schleifer → 3 Monteure → Lager"
+  },
+  {
+   "id": 26,
+   "device": "Grinder",
+   "recipe": "Large Wooden Gear",
+   "count": 1,
+   "floor": 1,
+   "x": 3000,
+   "y": 10000,
+   "zone": "Portal → Säge → 3 Schleifer → 3 Monteure → Lager"
+  },
+  {
+   "id": 27,
+   "device": "Grinder",
+   "recipe": "Large Wooden Gear",
+   "count": 1,
+   "floor": 1,
+   "x": 3000,
+   "y": 10500,
+   "zone": "Portal → Säge → 3 Schleifer → 3 Monteure → Lager"
+  },
+  {
+   "id": 30,
+   "device": "Processor",
+   "recipe": "Small Wooden Gear",
+   "count": 1,
+   "floor": 1,
+   "x": 4200,
+   "y": 9500,
+   "zone": "Portal → Säge → 3 Schleifer → 3 Monteure → Lager"
+  },
+  {
+   "id": 31,
+   "device": "Storage",
+   "recipe": "_sink",
+   "count": 1,
+   "floor": 1,
+   "x": 5550,
+   "y": 10000,
+   "zone": "Portal → Säge → 3 Schleifer → 3 Monteure → Lager"
+  },
+  {
+   "id": 32,
+   "device": "Processor",
+   "recipe": "Small Wooden Gear",
+   "count": 1,
+   "floor": 1,
+   "x": 4200,
+   "y": 10000,
+   "zone": "Portal → Säge → 3 Schleifer → 3 Monteure → Lager"
+  },
+  {
+   "id": 33,
+   "device": "Processor",
+   "recipe": "Small Wooden Gear",
+   "count": 1,
+   "floor": 1,
+   "x": 4200,
+   "y": 10550,
+   "zone": "Portal → Säge → 3 Schleifer → 3 Monteure → Lager"
+  }
+ ],
+ "connections": [
+  {
+   "from": 23,
+   "to": 24,
+   "fromPort": 0,
+   "toPort": 0,
+   "id": "c14",
+   "waypoints": []
+  },
+  {
+   "from": 24,
+   "to": 25,
+   "fromPort": 0,
+   "toPort": 0,
+   "id": "c15",
+   "waypoints": []
+  },
+  {
+   "from": 24,
+   "to": 26,
+   "fromPort": 0,
+   "toPort": 0,
+   "id": "c16",
+   "waypoints": []
+  },
+  {
+   "from": 24,
+   "to": 27,
+   "fromPort": 0,
+   "toPort": 0,
+   "id": "c17",
+   "waypoints": []
+  },
+  {
+   "from": 25,
+   "to": 30,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c36"
+  },
+  {
+   "from": 30,
+   "to": 31,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c37"
+  },
+  {
+   "from": 26,
+   "to": 32,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c38"
+  },
+  {
+   "from": 27,
+   "to": 33,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c39"
+  },
+  {
+   "from": 32,
+   "to": 31,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c40"
+  },
+  {
+   "from": 33,
+   "to": 31,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c41"
+  }
+ ],
+ "portalConfig": {
+  "23": {
+   "item": "logs",
+   "rate": 1
+  }
+ },
+ "zoneConfig": {},
+ "nextId": 96,
+ "factoryEfficiency": 100,
+ "beltCapacity": 60
+}

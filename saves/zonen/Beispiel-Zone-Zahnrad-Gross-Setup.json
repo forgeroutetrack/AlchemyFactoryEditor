@@ -1,0 +1,229 @@
+{
+ "name": "Beispiel-Zone: Zahnrad-Groß-Setup",
+ "desc": "🇩🇪 2 Portale → 2 Sägen → 6 Schleifer → 3 Monteure → 2 Lager · 45 kleine + 30 große Zahnräder/Min. Zeigt Weichen/Merges: 6 Schleifer auf 3 Monteure.\n🇬🇧 2 portals → 2 saws → 6 grinders → 3 processors → 2 storages · 45 small + 30 large gears/min. Shows splitters/merges: 6 grinders onto 3 processors.",
+ "app": "AlchemyFactoryEditor",
+ "v": 1,
+ "type": "zone",
+ "zone": "Zahnrad-Setup: kleine & große Zahnräder",
+ "savedAt": "2026-09-19T04:06:51.668Z",
+ "boxes": [
+  {
+   "id": 53,
+   "device": "Purchasing Portal",
+   "recipe": "_placeholder",
+   "count": 2,
+   "floor": 1,
+   "x": 7250,
+   "y": 8300,
+   "zone": "Zahnrad-Setup: kleine & große Zahnräder"
+  },
+  {
+   "id": 54,
+   "device": "Table Saw",
+   "recipe": "Plank",
+   "count": 2,
+   "floor": 1,
+   "x": 8500,
+   "y": 8400,
+   "zone": "Zahnrad-Setup: kleine & große Zahnräder"
+  },
+  {
+   "id": 55,
+   "device": "Grinder",
+   "recipe": "Large Wooden Gear",
+   "count": 3,
+   "floor": 1,
+   "x": 9750,
+   "y": 8200,
+   "zone": "Zahnrad-Setup: kleine & große Zahnräder"
+  },
+  {
+   "id": 56,
+   "device": "Storage",
+   "recipe": "_sink",
+   "count": 1,
+   "floor": 1,
+   "x": 12450,
+   "y": 8250,
+   "zone": "Zahnrad-Setup: kleine & große Zahnräder"
+  },
+  {
+   "id": 57,
+   "device": "Grinder",
+   "recipe": "Large Wooden Gear",
+   "count": 3,
+   "floor": 1,
+   "x": 9750,
+   "y": 8700,
+   "zone": "Zahnrad-Setup: kleine & große Zahnräder"
+  },
+  {
+   "id": 59,
+   "device": "Storage",
+   "recipe": "_sink",
+   "count": 1,
+   "floor": 1,
+   "x": 12500,
+   "y": 8850,
+   "zone": "Zahnrad-Setup: kleine & große Zahnräder"
+  },
+  {
+   "id": 60,
+   "device": "Processor",
+   "recipe": "Small Wooden Gear",
+   "count": 3,
+   "floor": 1,
+   "x": 11400,
+   "y": 8750,
+   "zone": "Zahnrad-Setup: kleine & große Zahnräder"
+  }
+ ],
+ "connections": [
+  {
+   "from": 53,
+   "to": 54,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c52"
+  },
+  {
+   "from": 54,
+   "to": 55,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c53"
+  },
+  {
+   "from": 54,
+   "to": 55,
+   "fromPort": 0,
+   "toPort": 1,
+   "waypoints": [],
+   "id": "c54"
+  },
+  {
+   "from": 54,
+   "to": 55,
+   "fromPort": 0,
+   "toPort": 2,
+   "waypoints": [],
+   "id": "c55"
+  },
+  {
+   "from": 55,
+   "to": 56,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c56"
+  },
+  {
+   "from": 55,
+   "to": 56,
+   "fromPort": 1,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c57"
+  },
+  {
+   "from": 55,
+   "to": 56,
+   "fromPort": 2,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c58"
+  },
+  {
+   "from": 53,
+   "to": 54,
+   "fromPort": 1,
+   "toPort": 1,
+   "waypoints": [],
+   "id": "c59"
+  },
+  {
+   "from": 54,
+   "to": 57,
+   "fromPort": 1,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c60"
+  },
+  {
+   "from": 54,
+   "to": 57,
+   "fromPort": 1,
+   "toPort": 1,
+   "waypoints": [],
+   "id": "c61"
+  },
+  {
+   "from": 54,
+   "to": 57,
+   "fromPort": 1,
+   "toPort": 2,
+   "waypoints": [],
+   "id": "c62"
+  },
+  {
+   "from": 57,
+   "to": 60,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c63"
+  },
+  {
+   "from": 57,
+   "to": 60,
+   "fromPort": 1,
+   "toPort": 1,
+   "waypoints": [],
+   "id": "c64"
+  },
+  {
+   "from": 57,
+   "to": 60,
+   "fromPort": 2,
+   "toPort": 2,
+   "waypoints": [],
+   "id": "c65"
+  },
+  {
+   "from": 60,
+   "to": 59,
+   "fromPort": 0,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c66"
+  },
+  {
+   "from": 60,
+   "to": 59,
+   "fromPort": 1,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c67"
+  },
+  {
+   "from": 60,
+   "to": 59,
+   "fromPort": 2,
+   "toPort": 0,
+   "waypoints": [],
+   "id": "c68"
+  }
+ ],
+ "portalConfig": {
+  "53": {
+   "item": "logs",
+   "rate": 1
+  }
+ },
+ "zoneConfig": {},
+ "nextId": 96,
+ "factoryEfficiency": 100,
+ "beltCapacity": 60
+}
