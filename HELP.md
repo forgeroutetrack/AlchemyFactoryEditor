@@ -27,7 +27,7 @@
 ![Mein Logo](IMAGE-BILDER/menu9.png) 
 ---
 
-**The first setup**
-![Mein Logo](IMAGE-BILDER/menu9.png) 
+**The first Setup**
+![Mein Logo](IMAGE-BILDER/setup.png) 
 ---
 
