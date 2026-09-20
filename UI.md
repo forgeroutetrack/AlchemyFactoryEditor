@@ -3,7 +3,7 @@
 
 ![Mein Logo](UI.png) 
 ---
-![Mein Logo](MENU 1.png) 
+![Mein Logo](menu.png) 
 ---
 
 
