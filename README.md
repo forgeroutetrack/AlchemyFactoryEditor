@@ -16,7 +16,7 @@
 Der Planer ist und bleibt **kostenlos, offline, ohne Login oder Tracking**. Wenn du das Projekt unterstützen magst:
 
 - 🎮 **Am besten: das Spiel kaufen & gut bewerten** — das hilft den echten Machern von „Alchemy Factory" am meisten.
-- ☕ **Freiwillige Spende** an das Fan-Projekt: *(hier deinen GitHub-Sponsors- oder Ko-fi-Link eintragen)*
+- ☕ **Freiwillige Spende** an das Fan-Projekt: Wird Erstellt !
 
 Spenden kaufen keinerlei Funktionen — alles im Tool ist für alle gleich.
 
@@ -65,7 +65,6 @@ AlchemyFactoryEditor/
 │   └── zonen/                  ← einzelne Zonen zum Tauschen (*.json)
 ├── documentation.md            ← Projekt-Geschichte, Spiel-Gesetze, Mathematik
 ├── CHANGELOG.md                ← alle Versionen
-└── GITHUB-ANLEITUNG.md         ← wie man dieses Repo selbst veröffentlicht
 ```
 
 ## 📊 Abgrenzung zu Community-Tools
@@ -85,9 +84,7 @@ Das Spiel ist Early Access — Rezepte ändern sich. Gemessene Werte (Stand 09/2
 
 MIT — frei nutzen, ändern, teilen. Fan-Projekt, keine Verbindung zu den Entwicklern von Alchemy Factory.
 
-## 🛠️ Admin-Werkzeug (nur für den Projektleiter)
 
-`admin.html` öffnen (Doppelklick, läuft lokal): editor.js einlesen → Vorgaben (Vorlagen) auf der Karte anordnen, Texte pflegen → „editor.js herunterladen" → neue js/editor.js in den Planer legen. Für öffentliche Releases einfach nicht mitgeben.
 
 ## Warum dieses Tool?
 Das Spiel sagt dir erst, was eine Maschine tut, wenn sie angeschlossen ist — „20/20 in 6 Sek", mehr nicht. Wie viele Sägen brauche ich für genug Kohle? Was kommt am Ende einer Kette raus? Wird die Linie langsamer, wenn ich noch eine Maschine anhänge? Diese Fragen beantworten weder das Spiel noch die Wikis — genau das tut dieser Planer: komplette Ketten VOR dem Bau durchrechnen, mit ehrlichen Zahlen, die live gegen das echte Spiel gemessen werden.
@@ -119,7 +116,7 @@ Ich erwähne das bewusst, denn ich halte das für ehrlich: Am Ende wird wohl kau
 The planner is and stays **free, offline, no login, no tracking**. If you’d like to support it:
 
 - 🎮 **Best option: buy the game & leave a good review** — that helps the actual makers of “Alchemy Factory” the most.
-- ☕ **Voluntary tip** to the fan project: *(add your GitHub Sponsors or Ko-fi link here)*
+- ☕ **Voluntary tip** to the fan project: Coming !
 
 Tips don’t buy any features — everything in the tool is the same for everyone.
 
@@ -168,7 +165,6 @@ AlchemyFactoryEditor/
 │   └── zonen/                  ← individual zones to share (*.json)
 ├── documentation.md            ← project story, game laws, mathematics (DE/EN)
 ├── CHANGELOG.md                ← all versions
-└── GITHUB-ANLEITUNG.md         ← how to publish this repo yourself (German)
 ```
 
 ## 📊 How this differs from community tools
