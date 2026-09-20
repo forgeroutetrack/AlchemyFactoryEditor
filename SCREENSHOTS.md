@@ -1,12 +1,12 @@
 **Die Live-Vorschau**
 **The live preview**
-
-**dark background**
+---
+**Dark Background**
 ![Mein Logo](IMAGE-BILDER/UI.png)
 **white background**
 ![Mein Logo](IMAGE-BILDER/weiss.png) 
 ---
-
+---
 **MENU**
 ![Mein Logo](IMAGE-BILDER/menu1.png) 
 ---
@@ -26,8 +26,12 @@
 ---
 ![Mein Logo](IMAGE-BILDER/menu9.png) 
 ---
-
+---
 **The first Setup**
 ![Mein Logo](IMAGE-BILDER/setup.png) 
 ---
+**Connecting the Lines - is there a "Red line" error?**
+![Mein Logo](IMAGE-BILDER/fehler.png) 
+---
+
 
