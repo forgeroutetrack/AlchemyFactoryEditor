@@ -1,7 +1,10 @@
 **Die Live-Vorschau**
 **The live preview**
 
-![Mein Logo](IMAGE-BILDER/UI.png) 
+![Mein Logo](IMAGE-BILDER/UI.png)
+![Mein Logo](IMAGE-BILDER/weiss.png) 
+---
+
 ---
 ![Mein Logo](IMAGE-BILDER/menu1.png) 
 ---
